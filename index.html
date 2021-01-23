@@ -5,8 +5,97 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+<header> 
+  <nav>
+    <ul>
+        <li><a href="#">ИНФОРМАЦИЯ</a></li>
+        <li><a href="#">ФОТО И ВИДЕО</a></li>
+        <img src="https://via.placeholder.com/150x100" alt="Логотип Седоны">
+        <li><a href="map.html">КАРТА ШТАТА</a></li>
+        <li><a href="motels.com">ГОСТИНИЦЫ</a></li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <section> 
+      <img src="https://via.placeholder.com/1200x509"  alt="фото каньона">
+      <h2>WELCOME -to the gorgeous SEDONA</h2>
+      <p>"Because the Grand Canyon sucks!"</p>
+      <h1> СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h1><!--Обернул это предложение
+    в тег h1, потому что, на мой взгляд оно очень точно описывает содержимое всего сайта, описывает весь сайт-->
+    </section>
+    <section>
+      <h2> РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ ЧЕМ ГРАНД КАНЬОН!</h2>
+        <ol>
+          <li><h3>НАСТОЯЩИЙ ГОРОДОК</h3> 
+            <p>СЕДОНА - НЕ АНТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЁТ СВОЯ ЖИЗНЬ</p>
+            <img src="https://via.placeholder.com/800x256"  alt="Фото отеля" >
+            <ul>
+              <img src="https://via.placeholder.com/75x72" alt="Картинка домика">
+              <li><h4>ЖИЛЬЕ</h4> </li>
+                <p>РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ МОТЕЛЕ, ВСЕ КАК В КИНО!</hp>
+                <br>
+                <img src="https://via.placeholder.com/75x70" alt="Картинка бургера">
+              <li><h4>ЕДА</h4></li>
+                <p>ВСЕГДА ЗАКАЗЫВАЙТЕ ФИРМЕННЫЙ БУРГЕР, ВЫ НЕ РАЗОЧАРУЕТЕСЬ!</p>
+                <img src="https://via.placeholder.com/64x77" alt="Картинка подарка">
+              <li><h4>СУВЕНИРЫ</h4></li>
+                <p>НЕ ТОЛЬКО КИТАЙСКОГО, НО И МЕСТНОГО ПРОИЗВОДСТВА!</p>
+            </ul>
+          </li>
+          <img src="https://via.placeholder.com/800x256"  alt="Мост дьявола">
+          <li><h3>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h3></li>
+            <p>ДА, ПО НЕМУ МОЖНО ПРОЙТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p>
+          <li><h3>НЕБОЛЬШАЯ ПЛОЩАДЬ</h3></li>
+            <P>ВСЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</P>
+          <li><h3>КРАСИВАЯ ДОРОГА</h3></li>
+            <P>ЕХАТЬ В СЕДОНЕ ИЗ ЛАС-ВЕГАСА СОВСЕМ НЕ СКУЧНО!</P>
+          <li><h3>МАЛО ТУРИСТОВ</h2></li>
+            <P>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛПЯТСЯ ТАМ</P>
+          </ol>
+      </section>
+      <section><!--третья секция думал добавить в футер. Но если добавлю в футэр, 
+    что будет с с окном дата въезда/выезда?-->
+        <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
+          <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
+      </section>
+      <section>
+        <h2>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          Дата заезда<input type="date" name="data-v" value="2017-04-24">
+          <br>
+          Дата выезда<input type="date" name="date-iz" value="2017-07-04">
+          <br>
+          Взрослые <input type="number" name="adult" value="2">
+          <br>
+          Дети
+          <input type="number" name="children" value="0">
+          <br>
+          <input type="button" name="search" value="НАЙТИ">
+        </form>
+      </section>
+</main>
+  <footer>
+  <section>
+    <h2>Контактная информация</h2>
+    <p>#VISITSEDONA 
+      <br>
+      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a></p>
+  </section>
+  <section>
+    <h2>Давайте дружить!</h2>
+      <ul>
+        <li>
+          <img src="https://via.placeholder.com/46x48" id="twitter" alt="значек твитера"> 
+          <img src="https://via.placeholder.com/46x48" id="facebook" alt="значек фэйсбука">
+          <img src="https://via.placeholder.com/46x48" id="youtube" alt="значек ютуба">
+        </li>
+      </ul>
+  </section>
+  
+  <h2>Разработано</h2>
+    <p>WEBSITE BY<a href="https://htmlacademy.ru"> <img src="https://via.placeholder.com/115x41" alt="значок академии"></a></p>
+</footer>
   </body>
+
 </html>

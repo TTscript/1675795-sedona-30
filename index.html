@@ -11,7 +11,7 @@
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
-          <li><a href="catalog.com">Гостиницы</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
       <a href="index.html"> <img src="https://via.placeholder.com/138x70" alt="Логотип Седоны"> </a>
@@ -70,14 +70,20 @@
         <h2>ПОИСК ГОСТИНИЦЫ В седоне</h2>
         <p><b>Заинтересовались?</b></p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <input type="button" value="ПОИСК ГОСТИНИЦЫ В седоне">
+        <button type="button" value="ПОИСК ГОСТИНИЦЫ В седоне">ПОИСК ГОСТИНИЦЫ В седоне</button>
         <form action="https://echo.htmlacademy.ru/" method="POST">
-          <p>Дата заезда:<input type="date" name="data-v" value="2017-04-24"></p>
-          <p>Дата выезда:<input type="date" name="date-iz" value="2017-07-04"></p>
-          <p>Взрослые:<input type="number" name="adult" value="2"></p>
-          <p>Дети:<input type="number" name="children" value="0"></p>
-          <input type="button" name="search" value="НАЙТИ">
+          <p>
+            <label>Дата заезда:<input type="date" name="data-v" value="2017-04-24"></label>
+          </p>
+          <p>
+            <label>Дата выезда:<input type="date" name="date-iz" value="2017-07-04"></label>
+          </p>
+          <p>
+            <label>Взрослые:<input type="number" name="adult" placeholder="2"></label>
+            <label> Дети:<input type="number" name="children" placeholder="0"></label>
+          </p> 
         </form>
+        <button type="button" name="search" value="search">Найти</button> 
         <img src="https://via.placeholder.com/1199x594" alt="Карта">
       </section>
     </main>
@@ -91,7 +97,7 @@
         <li> <a href="https://facebook.com">Фейсбук</a></li>
         <li><a href="https://youtube.com">Ютуб</a></li>
       </ul>
-      <p>Website by <a href="https://htmlacademy.ru"> <img src="https://via.placeholder.com/115x41" alt="Логотип HTML Academy"></a></p>
+      <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"> <img src="https://via.placeholder.com/115x41" alt="Логотип HTML Academy"></a></p>
     </footer>
   </body>
 </html>

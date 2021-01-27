@@ -56,10 +56,12 @@
             </fieldset>
             <fieldset>
                 <legend>Стоимость в сутки (Р):</legend>
-                <input type="number" min="0" name="ot" placeholder="от 0">
-                <input type="number" max="3000" name="do" placeholder="До 3000" >
-                <p><input type="range" name="polzunok"></p>
-                <p><input type="submit" name="show=hotels" value="Показать"></p>
+                <input type="text" name="from" placeholder="от 0">
+                <input type="text" name="until" placeholder="До 3000">
+                <div class="slidecountainer">
+                  <p><input type="range" name="slider"></p>
+                </div>                
+                <p><button type="submit" name="show=hotels"> Показать</button></p>
             </fieldset>
           </form>
         </section>            
@@ -68,50 +70,55 @@
           <h3>Найдено: 3</h3>
           <p>Сортировка</p>
           <ul>
-              <li>По цене</li>
-              <li>По типу</li>
-              <li>По рейтингу</li>
+              <li><a>По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <li><a href="#">По рейтингу</a></li>
+              <li><a href="#">Сортировка вниз</a></li>
+              <li><a href="#">Сортировка вверх</a></li>
           </ul>
           <ul>
             <li>
-              <a href="#"><img src="https://via.placeholder.com/135x90"  alt="Amara Resort & Spa">
-                Amara Resort & Spa</a>   
-                <p>Гостиница От 4000 Р.</p>       
-                <br>      
-                <form action="https://echo.htmlacademy.ru/" method="POST">
-                  <button type="button" name="info-amara-resort&spa">Подробнее</button>
-                <input type="submit" name="bron'-amara-resort&spa" value="Забронировать">
-                <button type="button" disabled>Рейтинг: 8,5</button>
-                </form>       
-              </li>
+              <a href="#"><img src="https://via.placeholder.com/135x90"  alt="Amara Resort & Spa">Amara Resort & Spa</a>  
+              <div class="five-stars">
+              </div>
+              <p>Гостиница</p>       
+              <p>От 4000 Р.</p>
+              <p>
+              <a href="#">Подробнее</a>
+              <a href="#">Забронировать</a>
+              Рейтинг: 8,5                
+                </p>      
+            </li>
           </ul>
           <ul>
             <li>
-              <a href="#"><img src="https://via.placeholder.com/135x90"  alt="Desert Quail Inn">
-                Desert Quail Inn</a>   
-                <p>Мотель От 3000 Р.</p>       
-                <br>      
-                <form action="https://echo.htmlacademy.ru/" method="POST">
-                  <button type="button" name="info-desert-quail-inn">Подробнее</button>
-                <input type="submit" name="bron'-desert-quail-inn" value="Забронировать">
-                <button type="button" disabled>Рейтинг: 8,9</button>
-                </form>       
-              </li>
+              <a href="#"><img src="https://via.placeholder.com/135x90"  alt="Desert Quail Inn">Desert Quail Inn</a> 
+              <div class="three-stars">
+              </div>  
+              <p>Мотель</p>       
+              <p>От 3000 Р.</p>
+              <p>
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+                Рейтинг: 8,9  
+              </p>          
+            </li>
           </ul>
           <ul>
             <li>
-              <a href="#"><img src="https://via.placeholder.com/135x90"  alt="Villas at Poco Diablo">
-                Villas at Poco Diablo</a>   
-                <p>Апартаменты От 2000 Р.</p>       
-                <br>      
-                <form action="https://echo.htmlacademy.ru/" method="POST">
-                  <button type="button" name="info-villas-at-poco-diablo">Подробнее</button>
-                <input type="submit" name="bron'-villas-at-poco-diablo" value="Забронировать">
-                <button type="button" disabled>Рейтинг: 9,2</button>
-                </form>       
-              </li>
+              <a href="#"><img src="https://via.placeholder.com/135x90"  alt="Villas at Poco Diablo">Villas at Poco Diablo</a>   
+              <div class="two-stars">
+              </div>
+              <p>Апартаменты</p> 
+              <p>От 2000 Р.</p>     
+              <p>
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+                Рейтинг: 9,2   
+              </p>   
+            </li>
           </ul> 
-        </section>   
+      </section>   
     </main>
     <footer>
       <p>#visitSEDONA

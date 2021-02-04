@@ -1,0 +1,286 @@
+/* Variables */
+
+:root  {
+  --basic-black: #000000;
+  --basic-darkgray: #333333;
+  --basic-white: #ffffff;
+  --basic-lowblue: #81B3D2;
+  --basic-blue: #669EC0;
+  --basic-darkblue:#5496BD;
+  --basic-lowgray: #666666;
+  --basic-lowbrown: #766357;
+  --basic-brown: #604E43;
+  --basic-darkbrown: #503E33;
+  --basic-checkboxborders:#6A6A6A;
+  --basic-sliderinsidebutton:#ABABAB;
+  --basic-backgroundcolor: #F2F2F2;
+  --basic-backgroundcolorgray:#EEEEEE;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+       url("../fonts/PTSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  src:  url("../fonts/PTSans-Bold.woff2") format("woff2"),
+        url("../fonts/PTSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*Global*/
+.page {
+  background-color: var(--basic-backgroundcolor);
+  width: 1280px;
+  height:2762px;
+}
+
+.page-body  {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size:14px;
+  text-transform:uppercase;
+  line-height:21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  margin-left:40px;
+  margin-right:40px;
+  width: 1200px;
+  height:2762px;
+}
+
+a {
+  text-decoration:none;
+}
+
+img {
+  max-width:100%;
+  height:auto;
+}
+
+/* Main Navigation*/
+
+.site-navigation a,
+.site-navigation {
+  color: var(--basic-black);
+  list-style:none;
+}
+
+.header-countainer {
+  background-color: var(--basic-white);
+  width: 1200px;
+  height: 56px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: var(--basic-lowblue);
+}
+
+.site-navigation a:active {
+  color:var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Main Countainer*/
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.mountain-background {
+  background: url("../img/back/main-background-photo.jpg") no-repeat;
+  background-color: var(--basic-backgroundcolor);
+  width:1200px;
+  height:509px;
+}
+
+/*.cut-bgimage {
+  background-image: url("../img/back/cut-main-background-photo.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}*/
+
+.about-sedona {
+  text-align:center;
+}
+
+.welcome-text {
+  text-align: center;
+  vertical-align: center;
+}
+
+.sedona-town {
+  line-height:26px;
+  font-size:21px;
+}
+
+.simple-text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: var(--basic-darkgray);
+  font-size:14px;
+  line-height:26px;
+  }
+
+/* Sedona Features*/
+
+/* Feature One*/
+
+.feature-one {
+  background-color: var(--basic-lowblue);
+  width:400px;
+  height:256px;
+}
+
+.feature-item h3 {
+  font-size:21px;
+}
+
+.feature-item p {
+  font-family: "PT Sans","Arial", sans-serif;
+  color: var(--basic-darkgray);
+  font-size:14px;
+  line-height:26px;
+}
+
+.features-list,
+.features-underlist {
+  list-style:none;
+}
+
+.feature-one p,
+.feature-one h3 {
+color: var(--basic-white);
+text-align:center;
+vertical-align: middle;
+}
+
+/* Feature Two*/
+
+.feature-two {
+  background-color: var(--basic-lowblue);
+  width:400px;
+  height:256px;
+}
+
+.feature-two p,
+.feature-two h3 {
+  color: var(--basic-white);
+  text-align:center;
+  vertical-align: middle;
+}
+
+/* Features Three, Four, Five*/
+
+.feature-background-gray {
+  background-color: var(--basic-backgroundcolorgray);
+  width:1200px;
+  height:256px;
+
+}
+
+/* Searching Hotels in Sedona*/
+
+.youre-interested {
+font-size:30px;
+}
+
+.search-of-hotel {
+text-align: center;
+line-height: 24px;
+}
+
+.youre-interested  +  p {
+  font-family: "PT Sans"/*,"Arial", sans-serif*/;
+  color: var(--basic-darkgray);
+  font-size:14px;
+  line-height:26px;
+}
+
+.button {
+  width:568px;
+  height:86px;
+  text-transform:uppercase;
+  color:var(--basic-white);
+  background-color:var(--basic-lowbrown);
+  font-size: 21px;
+  border:0px;
+}
+
+.search-button {
+  background-color:var(--basic-lowblue);
+  color:var(--basic-white);
+  width: 458px;
+  height:58px;
+}
+
+.search-form-table {
+background-color:var(--basic-white);
+width:568px;
+height:395px;
+background-position: 50% 50%;
+line-height:26px;
+font-size: 14px;
+background-position: left center;
+margin-left:315px;
+}
+
+/* Footer*/
+
+/* Contacts */
+
+.contacts-phone,
+.main-footer p {
+  color:var(--basic-black);
+  font-size: 21px;
+  line-height: 26px;
+}
+
+/* Social Buttons*/
+
+.social-list {
+  list-style:none;
+}
+
+.twitter-countainer,
+.facebook-countainer,
+.youtube-countainer {
+  background-color:var(--basic-lowblue);
+  width: 46px;
+  height: 48px;
+  margin:1px;
+}
+
+.twitter-logo {
+  background-image: url("../img/twitter.svg");
+  width:17px;
+  height:15px;
+}
+
+.facebook-logo {
+  background-image: url("../img/fb-icon.svg");
+  width:12px;
+  height:22px;
+}
+
+.youtube-logo {
+  background-image: url("../img/youtube.svg");
+  width:20px;
+  height:16px;
+}
+
+/* Copyright*/
+
+.footer-copyright {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size:14px;
+  line-height:26px;
+}

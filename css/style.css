@@ -36,25 +36,22 @@
 }
 
 /*Global*/
-.page {
-  background-color: var(--basic-backgroundcolor);
-  width: 1280px;
-  height:2762px;
-}
 
 .page-body  {
   margin: 0;
   padding: 0;
-  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size:14px;
-  text-transform:uppercase;
   line-height:21px;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
+  text-transform:uppercase;
+  color: var(--basic-darkgray);
+  background-color: var(--basic-backgroundcolor);
+}
+
+.container-center {
+  width:1200px;
   margin-left:40px;
-  margin-right:40px;
-  width: 1200px;
-  height:2762px;
+  background-color: var(--basic-white);
 }
 
 a {
@@ -68,20 +65,22 @@ img {
 
 /* Main Navigation*/
 
-.site-navigation a,
+
 .site-navigation {
-  color: var(--basic-black);
   list-style:none;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
 }
 
-.header-countainer {
-  background-color: var(--basic-white);
-  width: 1200px;
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.header-container {
   height: 56px;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:hover
+ {
   color: var(--basic-lowblue);
 }
 
@@ -93,42 +92,28 @@ img {
 /* Main Countainer*/
 
 .visually-hidden {
-  visibility: hidden;
+  display:none;
 }
 
 .mountain-background {
   background: url("../img/back/main-background-photo.jpg") no-repeat;
   background-color: var(--basic-backgroundcolor);
-  width:1200px;
-  height:509px;
-}
+  min-height:509px;
+ }
 
-/*.cut-bgimage {
+.cut-bgimage {
   background-image: url("../img/back/cut-main-background-photo.svg");
   background-repeat: no-repeat;
   background-position: bottom;
-}*/
+  min-height: 57px;
+ }
 
-.about-sedona {
-  text-align:center;
-}
-
-.welcome-text {
-  text-align: center;
-  vertical-align: center;
-}
-
-.sedona-town {
-  line-height:26px;
+.about-sedona .sedona-town {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size:21px;
+  line-height: 26px;
+  color: var(--basic-black);
 }
-
-.simple-text {
-  font-family: "PT Sans", "Arial", sans-serif;
-  color: var(--basic-darkgray);
-  font-size:14px;
-  line-height:26px;
-  }
 
 /* Sedona Features*/
 
@@ -137,18 +122,13 @@ img {
 .feature-one {
   background-color: var(--basic-lowblue);
   width:400px;
-  height:256px;
+  min-height:256px;
 }
 
 .feature-item h3 {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size:21px;
-}
-
-.feature-item p {
-  font-family: "PT Sans","Arial", sans-serif;
-  color: var(--basic-darkgray);
-  font-size:14px;
-  line-height:26px;
+  line-height:21px;
 }
 
 .features-list,
@@ -168,14 +148,13 @@ vertical-align: middle;
 .feature-two {
   background-color: var(--basic-lowblue);
   width:400px;
-  height:256px;
+  min-height:256px;
 }
 
 .feature-two p,
 .feature-two h3 {
   color: var(--basic-white);
   text-align:center;
-  vertical-align: middle;
 }
 
 /* Features Three, Four, Five*/
@@ -183,14 +162,15 @@ vertical-align: middle;
 .feature-background-gray {
   background-color: var(--basic-backgroundcolorgray);
   width:1200px;
-  height:256px;
-
+  min-height:256px;
 }
 
 /* Searching Hotels in Sedona*/
 
 .youre-interested {
-font-size:30px;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size:30px;
+  line-height:24px;
 }
 
 .search-of-hotel {
@@ -199,38 +179,53 @@ line-height: 24px;
 }
 
 .youre-interested  +  p {
-  font-family: "PT Sans"/*,"Arial", sans-serif*/;
-  color: var(--basic-darkgray);
-  font-size:14px;
-  line-height:26px;
+   line-height:24px;
 }
 
 .button {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   width:568px;
   height:86px;
   text-transform:uppercase;
   color:var(--basic-white);
   background-color:var(--basic-lowbrown);
   font-size: 21px;
+  outline: none;
   border:0px;
 }
 
+.find-hotel-sedona:hover {
+background-color: var(--basic-brown);
+}
+
+.find-hotel-sedona:active {
+background-color:var(--basic-darkbrown);
+color: rgba(255,255,255, 0.3);
+}
+
 .search-button {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   background-color:var(--basic-lowblue);
   color:var(--basic-white);
   width: 458px;
   height:58px;
+  }
+
+.search-button:hover {
+  background-color: var(--basic-blue);
+}
+.search-button:active {
+  background-color: var(--basic-darkblue);
+  color: rgba(255,255,255,0.3);
 }
 
 .search-form-table {
+font-family: "PT Sans Bold", "Arial", sans-serif;
 background-color:var(--basic-white);
 width:568px;
 height:395px;
-background-position: 50% 50%;
-line-height:26px;
 font-size: 14px;
-background-position: left center;
-margin-left:315px;
+line-height:26px;
 }
 
 /* Footer*/
@@ -250,32 +245,46 @@ margin-left:315px;
   list-style:none;
 }
 
-.twitter-countainer,
-.facebook-countainer,
-.youtube-countainer {
-  background-color:var(--basic-lowblue);
-  width: 46px;
-  height: 48px;
-  margin:1px;
+.social-button {
+background-color: var(--basic-lowblue);
+display:block;
+min-width:46px;
+min-height:48px;
+margin:1px;
 }
 
-.twitter-logo {
+.twitter-link {
   background-image: url("../img/twitter.svg");
   width:17px;
-  height:15px;
+  height:17px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.facebook-logo {
+.facebook-link {
   background-image: url("../img/fb-icon.svg");
   width:12px;
   height:22px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.youtube-logo {
+.youtube-link {
   background-image: url("../img/youtube.svg");
   width:20px;
   height:16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
+
+.social-button:hover {
+  background-color: var(--basic-blue);
+  }
+
+  .social-button:active {
+    background-color: var(--basic-darkblue);
+    color: rgba(255,255,255,0.3);
+  }
 
 /* Copyright*/
 
@@ -283,4 +292,19 @@ margin-left:315px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size:14px;
   line-height:26px;
+
+}
+
+.html-academy-logo {
+  background: url("../img/logo-htmlacademy.svg");
+  display:block;
+  width:115px;
+  height:41px;
+}
+.html-academy-logo:hover {
+  background: url("../img/logo-htmlacademy-aiming.svg");
+}
+
+.html-academy-logo:active {
+  background: url("../img/logo-htmlacademy-pushing.svg");
 }

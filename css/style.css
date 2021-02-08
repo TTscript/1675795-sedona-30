@@ -101,13 +101,6 @@ img {
   min-height:509px;
  }
 
-.cut-bgimage {
-  background-image: url("../img/back/cut-main-background-photo.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  min-height: 57px;
- }
-
 .about-sedona .sedona-town {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size:21px;
@@ -117,9 +110,9 @@ img {
 
 /* Sedona Features*/
 
-/* Feature One*/
+/* Feature One And Two*/
 
-.feature-one {
+.feature-one-two {
   background-color: var(--basic-lowblue);
   width:400px;
   min-height:256px;
@@ -136,25 +129,10 @@ img {
   list-style:none;
 }
 
-.feature-one p,
-.feature-one h3 {
+.feature-one-two p,
+.feature-one-two h3 {
 color: var(--basic-white);
 text-align:center;
-vertical-align: middle;
-}
-
-/* Feature Two*/
-
-.feature-two {
-  background-color: var(--basic-lowblue);
-  width:400px;
-  min-height:256px;
-}
-
-.feature-two p,
-.feature-two h3 {
-  color: var(--basic-white);
-  text-align:center;
 }
 
 /* Features Three, Four, Five*/
@@ -170,7 +148,7 @@ vertical-align: middle;
 .youre-interested {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size:30px;
-  line-height:24px;
+  line-height:30px;
 }
 
 .search-of-hotel {
@@ -178,8 +156,9 @@ text-align: center;
 line-height: 24px;
 }
 
-.youre-interested  +  p {
-   line-height:24px;
+.date-of-travel {
+  font-size:14px;
+  line-height:24px;
 }
 
 .button {
@@ -190,6 +169,7 @@ line-height: 24px;
   color:var(--basic-white);
   background-color:var(--basic-lowbrown);
   font-size: 21px;
+  line-height:26px;
   outline: none;
   border:0px;
 }
@@ -223,7 +203,6 @@ color: rgba(255,255,255, 0.3);
 font-family: "PT Sans Bold", "Arial", sans-serif;
 background-color:var(--basic-white);
 width:568px;
-height:395px;
 font-size: 14px;
 line-height:26px;
 }
@@ -232,9 +211,10 @@ line-height:26px;
 
 /* Contacts */
 
-.contacts-phone,
-.main-footer p {
-  color:var(--basic-black);
+.tag-visitsedona,
+.contacts-phone {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: var(--basic-black);
   font-size: 21px;
   line-height: 26px;
 }
@@ -289,10 +269,8 @@ margin:1px;
 /* Copyright*/
 
 .footer-copyright {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size:14px;
   line-height:26px;
-
 }
 
 .html-academy-logo {

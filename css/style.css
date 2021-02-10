@@ -135,14 +135,6 @@ color: var(--basic-white);
 text-align:center;
 }
 
-/* Features Three, Four, Five*/
-
-.feature-background-gray {
-  background-color: var(--basic-backgroundcolorgray);
-  width:1200px;
-  min-height:256px;
-}
-
 /* Searching Hotels in Sedona*/
 
 .youre-interested {
@@ -157,7 +149,6 @@ line-height: 24px;
 }
 
 .date-of-travel {
-  font-size:14px;
   line-height:24px;
 }
 
@@ -203,7 +194,6 @@ color: rgba(255,255,255, 0.3);
 font-family: "PT Sans Bold", "Arial", sans-serif;
 background-color:var(--basic-white);
 width:568px;
-font-size: 14px;
 line-height:26px;
 }
 
@@ -269,7 +259,6 @@ margin:1px;
 /* Copyright*/
 
 .footer-copyright {
-  font-size:14px;
   line-height:26px;
 }
 
@@ -285,4 +274,170 @@ margin:1px;
 
 .html-academy-logo:active {
   background: url("../img/logo-htmlacademy-pushing.svg");
+}
+
+/* CATALOG OF HOTELS*/
+
+/* Header */
+
+.site-navigation .on-the-page {
+  color: var(--basic-lowbrown);
+}
+
+.filter-bgimage {
+  background: url("../img/back/filter-background-image.png") no-repeat;
+  background-color:var(--basic-lowgray);
+  min-height: 217px;
+}
+
+/*Catalog List*/
+
+.catalog-list {
+list-style:none;
+}
+
+.legend-name {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size:16px;
+  line-height:21px;
+}
+
+.catalog-of-hotels {
+
+  color:var(--basic-white);
+}
+.button-search-results {
+width:137px;
+height:36px;
+border: 2px solid var(--basic-white);
+border-radius: 2px;
+font:inherit;
+background-color: transparent;
+}
+
+.button-search-results:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.search-results h3,
+.all-hotels .name-of-hotel {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size:21px;
+  line-height:26px;
+  color: var(--basic-black);
+}
+
+.hotels-list,
+.sort-list {
+  list-style:none;
+}
+
+.sort-options,
+.sort-list {
+  font-size:12px;
+  line-height:18px;
+}
+
+.by-price {
+color: var(--basic-lowblue);
+}
+
+.sort-by-type,
+.sort-by-rating {
+  color: var(--basic-black);
+  text-decoration: underline dashed var(--basic-lowblue);
+  opacity:0.3;
+}
+
+.sort-by-type:hover,
+.sort-by-rating:hover {
+  color: var(--basic-lowblue);
+  opacity:1;
+}
+
+.sort-by-type:active,
+.sort-by-rating:active {
+  color: var(--basic-black);
+  text-decoration:none;
+}
+
+.sort-down {
+  background: url("../img/sort-down-pushing.svg") no-repeat;
+  width: 11px;
+  height:10px;
+}
+
+.sort-up {
+background: url("../img/sort-up.svg") no-repeat;
+width:11px;
+height:10px;
+}
+
+.sort-down,
+.sort-up {
+  background-color: var(--basic-white);
+  min-height:10px;
+  display:block;
+}
+
+.sort-down:hover {
+  background-image: url("../img/sort-down-aiming.svg");
+}
+
+.sort-up:hover {
+  background-image: url("../img/sort-up-aiming.svg");
+}
+
+.sort-down:active {
+  background-image: url("../img/sort-down-pushing.svg");
+}
+
+.sort-up:active {
+  background-image: url("../img/sort-up-pushing.svg");
+}
+
+.more-details,
+.to-book {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: var(--basic-white);
+  display:block;
+}
+
+.more-details {
+  background-color: var(--basic-lowblue);
+  width:110px;
+  height:27px;
+}
+
+.more-details:hover {
+  background-color: var(--basic-blue);
+}
+
+.more-details:active {
+  background-color: var(--basic-darkblue);
+  color: rgba(255,255,255,0.3);
+}
+
+.to-book {
+  background-color: var(--basic-lowbrown);
+  width:142px;
+  height:27px;
+}
+
+.to-book:hover {
+  background-color: var(--basic-brown);
+}
+
+.to-book:active {
+  background-color:var(--basic-darkbrown);
+  color: rgba(255,255,255, 0.3);
+}
+
+.rating {
+  color: var(--basic-lowgray);
+  background-color:var(--basic-backgroundcolor);
+  width:110px;
+  height:27px;
+  display:block;
 }

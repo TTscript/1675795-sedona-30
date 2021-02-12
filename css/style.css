@@ -15,6 +15,7 @@
   --basic-sliderinsidebutton:#ABABAB;
   --basic-backgroundcolor: #F2F2F2;
   --basic-backgroundcolorgray:#EEEEEE;
+  --basic-graytriangle:#CACACA;
 }
 
 /* Fonts */
@@ -134,6 +135,11 @@ img {
 color: var(--basic-white);
 text-align:center;
 }
+/* Features Three, Four And Five*/
+
+.bg-gray {
+background-color: var(--basic-backgroundcolorgray);
+}
 
 /* Searching Hotels in Sedona*/
 
@@ -251,10 +257,24 @@ margin:1px;
   background-color: var(--basic-blue);
   }
 
-  .social-button:active {
-    background-color: var(--basic-darkblue);
-    color: rgba(255,255,255,0.3);
-  }
+.social-button:active {
+  background-color: var(--basic-darkblue);
+  color: rgba(255,255,255,0.3);
+ }
+
+.twitter-link:active {
+  background-image:url("../img/twitter-translucent.svg");
+}
+
+.facebook-link:active {
+  background-image:url("../img/fb-icon-translucent.svg");
+}
+
+.youtube-link:active {
+  background-image:url("../img/youtube-translucent.svg");
+}
+
+
 
 /* Copyright*/
 
@@ -262,18 +282,19 @@ margin:1px;
   line-height:26px;
 }
 
-.html-academy-logo {
-  background: url("../img/logo-htmlacademy.svg");
-  display:block;
-  width:115px;
-  height:41px;
-}
 .html-academy-logo:hover {
-  background: url("../img/logo-htmlacademy-aiming.svg");
+  background-image: url("../img/logo-htmlacademy-aiming.svg");
+  width:115px;
+  min-height:41px;
+  display:inline-block;
+}
+
+.html-academy-logo:hover img {
+  display:none;
 }
 
 .html-academy-logo:active {
-  background: url("../img/logo-htmlacademy-pushing.svg");
+  background-image: url("../img/logo-htmlacademy-pushing.svg");
 }
 
 /* CATALOG OF HOTELS*/
@@ -293,7 +314,7 @@ margin:1px;
 /*Catalog List*/
 
 .catalog-list {
-list-style:none;
+  list-style:none;
 }
 
 .legend-name {
@@ -302,17 +323,77 @@ list-style:none;
   line-height:21px;
 }
 
-.catalog-of-hotels {
+.filter-item {
+  margin:0;
+  padding:0;
+  border:none;
+}
 
+.range-fiter {
+  width:317px;
+  margin-top:20px;
+}
+
+.range-controls {
+position:relative;
+}
+
+.range-controls .scale {
+  height:2px;
+  width:316px;
+  background-color: rgba(255,255,255, 0.3);
+  margin: 20px 0px 33px 20px;
+}
+
+.range-controls .bar {
+  width:248px;
+  height:2px;
+  background-color: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position:absolute;
+  top:-8px;
+  width:3.8px;
+  height:3.9px;
+  background-color: var( --basic-sliderinsidebutton);
+  border: 7.6px solid var(--basic-white);
+  border-radius:50%;
+  box-shadow: 0 2px 1px 0 rgba(171,171,171,0.3);
+  cursor:pointer;
+}
+
+.range-controls .toggle-min {
+left:15px;
+}
+
+.range-controls .toggle-max {
+  left:255px;
+  }
+
+.range-controls input {
+  color:var(--basic-white);
+  background-color:transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-of-hotels {
   color:var(--basic-white);
 }
+
 .button-search-results {
-width:137px;
-height:36px;
-border: 2px solid var(--basic-white);
-border-radius: 2px;
-font:inherit;
-background-color: transparent;
+  width:137px;
+  height:36px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  font:inherit;
+  background-color: transparent;
 }
 
 .button-search-results:hover {
@@ -339,62 +420,80 @@ background-color: transparent;
   line-height:18px;
 }
 
-.by-price {
-color: var(--basic-lowblue);
-}
-
-.sort-by-type,
-.sort-by-rating {
+.sort-item {
   color: var(--basic-black);
-  text-decoration: underline dashed var(--basic-lowblue);
+  border-bottom: 1px dashed var(--basic-lowblue);
   opacity:0.3;
 }
 
-.sort-by-type:hover,
-.sort-by-rating:hover {
+.by-price-active {
   color: var(--basic-lowblue);
   opacity:1;
+  border-bottom:none;
 }
 
-.sort-by-type:active,
-.sort-by-rating:active {
+.sort-item:hover {
+  color: var(--basic-lowblue);
+  opacity:1;
+  border-bottom: 1px dashed var(--basic-lowblue);
+}
+
+.sort-item:active {
   color: var(--basic-black);
-  text-decoration:none;
+  border-bottom:none;
 }
 
 .sort-down {
-  background: url("../img/sort-down-pushing.svg") no-repeat;
-  width: 11px;
-  height:10px;
+  width: 0px;
+	height: 0px;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-top: 10px solid var(--basic-lowblue);
 }
 
 .sort-up {
-background: url("../img/sort-up.svg") no-repeat;
-width:11px;
-height:10px;
+  width: 0px;
+	height: 0px;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-bottom: 10px solid var(--basic-graytriangle);
 }
 
 .sort-down,
 .sort-up {
-  background-color: var(--basic-white);
-  min-height:10px;
-  display:block;
+  display:inline-block;
 }
 
 .sort-down:hover {
-  background-image: url("../img/sort-down-aiming.svg");
+  width: 0px;
+	height: 0px;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-top: 10px solid var(--basic-black);
 }
 
 .sort-up:hover {
-  background-image: url("../img/sort-up-aiming.svg");
+  width: 0px;
+	height: 0px;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-bottom: 10px solid var(--basic-black);
 }
 
 .sort-down:active {
-  background-image: url("../img/sort-down-pushing.svg");
+  width: 0px;
+	height: 0px;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-top: 10px solid var(--basic-lowblue);
 }
 
 .sort-up:active {
-  background-image: url("../img/sort-up-pushing.svg");
+  width: 0px;
+	height: 0px;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-bottom: 10px solid var(--basic-lowblue);
 }
 
 .more-details,
@@ -433,6 +532,26 @@ height:10px;
   background-color:var(--basic-darkbrown);
   color: rgba(255,255,255, 0.3);
 }
+
+.five-stars {
+background-image: url("../img/star.svg");
+background-color: var(--basic-white);
+min-height:17px;
+width:76px;
+}
+
+.three-stars {
+  background-image: url("../img/star.svg");
+  background-color: var(--basic-white);
+  min-height:17px;
+  width:57px;
+}
+.two-stars {
+  background-image: url("../img/star.svg");
+  background-color: var(--basic-white);
+  min-height:17px;
+  width:38px;
+  }
 
 .rating {
   color: var(--basic-lowgray);

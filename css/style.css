@@ -39,6 +39,10 @@
 
 /*Global*/
 
+.page {
+  height:100%;
+}
+
 .page-body {
   margin: 0;
   padding: 0;
@@ -48,6 +52,10 @@
   text-transform:uppercase;
   color: var(--basic-darkgray);
   background-color: var(--basic-backgroundcolor);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .container-center {
@@ -84,6 +92,8 @@ img {
   background-color: var(--basic-darkblue);
   color: rgba(255,255,255,0.3);
 }
+
+
 /* Main Navigation*/
 
 
@@ -97,7 +107,8 @@ img {
 }
 
 .header-container {
-  height: 56px;
+  display:grid;
+  background-color: var(--basic-white);
 }
 
 .site-navigation a:hover {
@@ -110,9 +121,16 @@ img {
 }
 
 /* Main Countainer*/
-
 .visually-hidden {
   display:none;
+}
+
+.mountain-background {
+  display:grid;
+}
+
+.welcome-div {
+  justify-self: center;
 }
 
 .mountain-background {
@@ -128,6 +146,16 @@ img {
   color: var(--basic-black);
 }
 
+.sedona-town,
+.simple-text {
+  text-align:center;
+}
+
+.simple-text {
+  padding:0;
+  margin-bottom:51px;
+}
+
 /* Sedona Features*/
 
 /* Feature One And Two*/
@@ -140,6 +168,7 @@ img {
 
 .feature-item h3 {
   font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: var(--basic-black);
   font-size:21px;
   line-height:21px;
 }
@@ -147,6 +176,8 @@ img {
 .features-list,
 .features-underlist {
   list-style:none;
+  margin:0;
+  padding:0;
 }
 
 .feature-one-two p,
@@ -154,16 +185,56 @@ img {
   color: var(--basic-white);
   text-align:center;
 }
+
+.index-column-1 {
+  display:grid;
+  min-height:256px;
+  grid-template-columns: 400px 800px;
+  margin:0;
+  padding:0;
+  margin-bottom:61px;
+}
+
+.features-underlist {
+  display:grid;
+  margin:0;
+  padding:0;
+  grid-template-columns: repeat(3, 400px);
+  margin-bottom:87px;
+  text-align:center;
+}
+
+.index-column-2 {
+  display:grid;
+  min-height:256px;
+  grid-template-columns: 800px 400px;
+  margin:0;
+  padding:0;
+}
+
 /* Features Three, Four And Five*/
 
 .bg-gray {
   background-color: var(--basic-backgroundcolorgray);
 }
 
+.feature-three-five {
+  display:grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align:center;
+  padding-top: 47px;
+  padding-bottom: 54px;
+  margin-bottom: 58px;
+  list-style:none;
+}
+
 /* Searching Hotels in Sedona*/
 
 .youre-interested {
   font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: var(--basic-black);
   font-size:30px;
   line-height:30px;
 }
@@ -175,10 +246,29 @@ img {
 
 .date-of-travel {
   line-height:24px;
+  margin: 0px 383px;
+  margin-bottom: 24px;
+}
+
+.form-window {
+  margin:0px;
+  padding:0px;
+  background-color:var(--basic-white);
+  width:568px;
+  height:481px;
+  position:absolute;
+  margin:0px 316px;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.main-map {
+  margin-top:86px;
 }
 
 .big-brown-button {
   background-color: var(--basic-lowbrown);
+  margin:0;
+  padding:0;
   font-size:21px;
   line-height:26px;
   min-width:568px;
@@ -199,13 +289,20 @@ img {
   line-height:26px;
   min-width:458px;
   min-height:58px;
+  margin:0;
+  padding:0;
+  margin-bottom:55px;
 }
 
 .search-form-table {
   font-family: "PT Sans Bold", "Arial", sans-serif;
-  background-color:var(--basic-white);
+  color:var(--basic-black);
   width:568px;
   line-height:26px;
+}
+
+.search-item {
+  margin:55px 41px;
 }
 
 /* Footer*/
@@ -282,11 +379,32 @@ img {
   line-height:26px;
 }
 
-.html-academy-logo:hover path{
+.main-footer {
+  display:grid;
+  margin:0;
+  padding:0;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--basic-white);
+  max-height:120px;
+  opacity:0.9;
+  margin: 0px 120px;
+}
+
+.social-list {
+  display:grid;
+  margin:0;
+  padding:0;
+  grid-template-columns: repeat(3, 1fr);
+  gap:6px;
+  max-width:102px;
+  margin-top:15px;
+}
+
+.html-academy-logo:hover svg{
   fill: var(--basic-lowblue);
 }
 
-.html-academy-logo:active path{
+.html-academy-logo:active svg{
   fill: var(--basic-logoactive);
   }
 
@@ -358,7 +476,7 @@ img {
 
 .range-controls .toggle-max {
   left:255px;
-  }
+}
 
 .range-controls input {
   color:var(--basic-white);
@@ -509,6 +627,7 @@ img {
   min-height:17px;
   width:57px;
 }
+
 .two-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
@@ -523,3 +642,4 @@ img {
   height:27px;
   display:inline-block;
 }
+

@@ -31,9 +31,7 @@
       <section class="about-sedona">
           <h1 class="visually-hidden">Седона. Сайт туристического городка в штате Аризона.</h1>
           <div class="mountain-background">
-            <div class="welcome-div">
               <img class="welcome-text" src="img/welcome-text.svg" width="457" height="351" alt="Welcome to the gorgeous SEDONA">
-            </div>
           </div>
         <p class="sedona-town">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="simple-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -42,7 +40,7 @@
       <section class="sedona-features">
         <h2 class="visually-hidden">Преимущества Седоны перед Гранд Каньоном</h2>
         <ol class="features-list">
-          <li class="feature-item first-item">
+          <li class="feature-item">
             <div class="index-column-1">
               <div class="feature-one-two">
                 <h3>Настоящий городок</h3>
@@ -102,22 +100,24 @@
         <h2 class="visually-hidden">ПОИСК ГОСТИНИЦЫ В седоне</h2>
         <p class="youre-interested"><b>Заинтересовались?</b></p>
         <p class="date-of-travel">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <div class="form-window">
-          <button class="button big-brown-button" type="button" value="ПОИСК ГОСТИНИЦЫ В седоне">ПОИСК ГОСТИНИЦЫ В седоне</button>
-          <div class="search-form-table">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="POST">
-              <p class="search-item">
-                <label>Дата заезда:<input type="date" name="data-v" value="2017-04-24"></label>
-              </p>
-              <p class="search-item">
-                <label>Дата выезда:<input type="date" name="date-iz" value="2017-07-04"></label>
-              </p>
-              <p class="search-item">
-                <label>Взрослые:<input type="number" name="adult" placeholder="2"></label>
-                <label>Дети:<input type="number" name="children" placeholder="0"></label>
-              </p>
-              <button class="button big-blue-button" type="submit" name="search" value="search">Найти</button>
-            </form>
+        <div class="search-windom-block">
+          <div class="form-window">
+            <button class="button big-brown-button" type="button" value="ПОИСК ГОСТИНИЦЫ В седоне">ПОИСК ГОСТИНИЦЫ В седоне</button>
+            <div class="search-form-table">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="POST">
+                <p class="search-item">
+                  <label>Дата заезда:<input type="date" name="data-v" value="2017-04-24"></label>
+                </p>
+                <p class="search-item">
+                  <label>Дата выезда:<input type="date" name="date-iz" value="2017-07-04"></label>
+                </p>
+                <p class="search-item">
+                  <label>Взрослые:<input type="number" name="adult" placeholder="2"></label>
+                  <label>Дети:<input type="number" name="children" placeholder="0"></label>
+                </p>
+                <button class="button big-blue-button" type="submit" name="search" value="search">Найти</button>
+              </form>
+            </div>
           </div>
         </div>
         <img class="main-map" src="img/map.png" width="1199" height="594" alt="Карта">

@@ -52,16 +52,16 @@
   text-transform:uppercase;
   color: var(--basic-darkgray);
   background-color: var(--basic-backgroundcolor);
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 .container-center {
   width:1200px;
-  margin-left:40px;
+  margin:0px auto;
   background-color: var(--basic-white);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -96,7 +96,6 @@ img {
 
 /* Main Navigation*/
 
-
 .site-navigation {
   list-style:none;
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -104,11 +103,6 @@ img {
 
 .site-navigation a {
   color: var(--basic-black);
-}
-
-.header-container {
-  display:grid;
-  background-color: var(--basic-white);
 }
 
 .site-navigation a:hover {
@@ -120,13 +114,12 @@ img {
   opacity: 0.3;
 }
 
-/* Main Countainer*/
-.visually-hidden {
-  display:none;
-}
+/* Main Countainer */
 
-.mountain-background {
-  display:grid;
+.visually-hidden {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
 }
 
 .welcome-div {
@@ -137,7 +130,12 @@ img {
   background: url("../img/back/main-background-photo.jpg") no-repeat;
   background-color: var(--basic-backgroundcolor);
   min-height:509px;
+  margin-bottom: 42px;
  }
+
+.about-sedona {
+  margin-bottom:51px;
+}
 
 .about-sedona .sedona-town {
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -149,11 +147,6 @@ img {
 .sedona-town,
 .simple-text {
   text-align:center;
-}
-
-.simple-text {
-  padding:0;
-  margin-bottom:51px;
 }
 
 /* Sedona Features*/
@@ -190,17 +183,16 @@ img {
   display:grid;
   min-height:256px;
   grid-template-columns: 400px 800px;
-  margin:0;
-  padding:0;
   margin-bottom:61px;
+}
+
+.first-item {
+  margin-bottom:87px;
 }
 
 .features-underlist {
   display:grid;
-  margin:0;
-  padding:0;
   grid-template-columns: repeat(3, 400px);
-  margin-bottom:87px;
   text-align:center;
 }
 
@@ -208,8 +200,6 @@ img {
   display:grid;
   min-height:256px;
   grid-template-columns: 800px 400px;
-  margin:0;
-  padding:0;
 }
 
 /* Features Three, Four And Five*/
@@ -224,9 +214,8 @@ img {
   padding: 0;
   grid-template-columns: 1fr 1fr 1fr;
   text-align:center;
-  padding-top: 47px;
-  padding-bottom: 54px;
   margin-bottom: 58px;
+  padding: 47px 0px 54px 0px;
   list-style:none;
 }
 
@@ -242,12 +231,13 @@ img {
 .search-of-hotel {
   text-align: center;
   line-height: 24px;
+  position:relative;
 }
 
 .date-of-travel {
   line-height:24px;
   margin: 0px 383px;
-  margin-bottom: 24px;
+  margin-bottom: 110px;
 }
 
 .form-window {
@@ -255,14 +245,14 @@ img {
   padding:0px;
   background-color:var(--basic-white);
   width:568px;
-  height:481px;
+  min-height:481px;
   position:absolute;
-  margin:0px 316px;
+  top:218px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin:-86px 316px 0px 316px;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-}
-
-.main-map {
-  margin-top:86px;
 }
 
 .big-brown-button {
@@ -306,6 +296,16 @@ img {
 }
 
 /* Footer*/
+
+.main-footer {
+  display:grid;
+  margin:0;
+  padding:0;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--basic-white);
+  max-height:120px;
+  opacity:0.9;
+}
 
 /* Contacts */
 
@@ -379,17 +379,6 @@ img {
   line-height:26px;
 }
 
-.main-footer {
-  display:grid;
-  margin:0;
-  padding:0;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: var(--basic-white);
-  max-height:120px;
-  opacity:0.9;
-  margin: 0px 120px;
-}
-
 .social-list {
   display:grid;
   margin:0;
@@ -397,7 +386,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap:6px;
   max-width:102px;
-  margin-top:15px;
 }
 
 .html-academy-logo:hover svg{

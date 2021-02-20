@@ -53,7 +53,7 @@ height: 100%;
   text-transform:uppercase;
   color: var(--basic-darkgray);
   background-color: var(--basic-backgroundcolor);
-  height:100%;
+  min-height:100%;
 }
 
 .container-center {
@@ -63,6 +63,7 @@ height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  min-height:100%;
 }
 
 a {
@@ -139,7 +140,7 @@ input[type="radio"].visually-hidden {
 
 .mountain-background {
   background: url("../img/back/main-background-photo.jpg") no-repeat;
-  background-color: var(--basic-backgroundcolor);
+  background-color: var(--basic-brown);
   min-height:509px;
   margin-bottom: 42px;
  }
@@ -244,28 +245,19 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
 }
 
-.search-windom-block {
-  position:relative;
-}
-
 .date-of-travel {
   line-height:24px;
   margin: 0px 383px;
-  margin-bottom: 110px;
+  margin-bottom: 24px;
 }
 
 .form-window {
-  margin:0px;
+  margin: 0px auto;
   padding:0px;
   background-color:var(--basic-white);
   width:568px;
   min-height:481px;
-  position:absolute;
-  top:218px;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  margin:-304px 316px 0px 316px;
+  position:relative;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
@@ -298,15 +290,22 @@ input[type="radio"].visually-hidden {
   margin-bottom:55px;
 }
 
-.search-form-table {
+.search-form {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   color:var(--basic-black);
   width:568px;
   line-height:26px;
+  position: absolute;
+  left:0;
+  top:50px;
 }
 
 .search-item {
   margin:55px 41px;
+}
+
+.main-map {
+  margin: -395px 0px 0px 0px;
 }
 
 /* Footer*/

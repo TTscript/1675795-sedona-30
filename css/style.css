@@ -17,6 +17,7 @@
   --basic-backgroundcolorgray:#EEEEEE;
   --basic-graytriangle:#CACACA;
   --basic-logoactive: #BDBBBC;
+  --basic-linecolor: #E5E5E5;
 }
 
 /* Fonts */
@@ -84,6 +85,8 @@ img {
   vertical-align:middle;
   outline:none;
   border:0px;
+  margin:0;
+  padding:0;
 }
 
 .button:hover {
@@ -94,7 +97,6 @@ img {
   background-color: var(--basic-darkblue);
   color: rgba(255,255,255,0.3);
 }
-
 
 /* Main Navigation*/
 
@@ -221,10 +223,8 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-three-five {
-  display:grid;
   margin: 0;
   padding: 0;
-  grid-template-columns: 1fr 1fr 1fr;
   text-align:center;
   margin-bottom: 58px;
   padding: 47px 0px 54px 0px;
@@ -256,7 +256,6 @@ input[type="radio"].visually-hidden {
   padding:0px;
   background-color:var(--basic-white);
   width:568px;
-  min-height:481px;
   position:relative;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
@@ -297,15 +296,13 @@ input[type="radio"].visually-hidden {
   line-height:26px;
   position: absolute;
   left:0;
-  top:50px;
+  top:100%;
+  background-color: var(--basic-white);
+  min-height:395px;
 }
 
 .search-item {
   margin:55px 41px;
-}
-
-.main-map {
-  margin: -395px 0px 0px 0px;
 }
 
 /* Footer*/
@@ -417,18 +414,39 @@ input[type="radio"].visually-hidden {
   color: var(--basic-lowbrown);
 }
 
+/*Filters */
+
 .filter-bgimage {
   background: url("../img/back/filter-background-image.png") no-repeat;
   background-color:var(--basic-lowgray);
   min-height: 217px;
+  display:grid;
+  grid-template-columns: repeat(6, 200px);
+  color:var(--basic-white);
+  margin:0px 0px 30px 0px;
+  padding: 0;
 }
 
-/* Filters */
+.filter-item:last-child {
+  grid-column:5/7;
+}
+
+.catalog-item {
+  padding:0px;
+  margin-bottom:0px 0px 25px 0px;
+}
+
+.catalog-item:last-child {
+  margin:0px;
+  padding:0px;
+}
 
 .legend-name {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size:16px;
   line-height:21px;
+  margin:0px 0px 24px 0px;
+  padding: 27px 0px 0px 72px;
 }
 
 .filter-item {
@@ -448,9 +466,9 @@ input[type="radio"].visually-hidden {
 
 .range-controls .scale {
   height:2px;
-  width:316px;
+  width:333px;
   background-color: rgba(255,255,255, 0.3);
-  margin: 20px 0px 33px 20px;
+  margin: 20px 0px 33px 0px;
 }
 
 .range-controls .bar {
@@ -461,22 +479,22 @@ input[type="radio"].visually-hidden {
 
 .range-controls .toggle {
   position:absolute;
-  top:-8px;
-  width:3.8px;
-  height:3.9px;
+  top:33px;
+  width:4px;
+  height:4px;
   background-color: var( --basic-sliderinsidebutton);
-  border: 7.6px solid var(--basic-white);
+  border: 8px solid var(--basic-white);
   border-radius:50%;
   box-shadow: 0 2px 1px 0 rgba(171,171,171,0.3);
   cursor:pointer;
 }
 
 .range-controls .toggle-min {
-  left:15px;
+  left:0px;
 }
 
 .range-controls .toggle-max {
-  left:255px;
+  left:245px;
 }
 
 .range-controls input {
@@ -496,10 +514,6 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
-.catalog-of-hotels {
-  color:var(--basic-white);
-}
-
 .button-white {
   color:var(--basic-white);
   border: 2px solid var(--basic-white);
@@ -515,6 +529,8 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
 }
 
+/* Sort */
+
 .search-results h3,
 .all-hotels .name-of-hotel {
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -523,10 +539,20 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
 }
 
-/*Catalog List*/
-
 .catalog-list {
   list-style:none;
+  padding: 0px 0px 0px 72px;
+  margin:0px;
+}
+
+.sort-block {
+  padding: 0px 0px 0px 73px;
+  margin:0px;
+}
+
+.sort-block,
+.sort-list {
+  display:flex;
 }
 
 .hotels-list,
@@ -534,16 +560,38 @@ input[type="radio"].visually-hidden {
   list-style:none;
 }
 
+.hotels-list {
+  margin:0;
+  padding:0;
+}
+
+.sort-block h3 {
+  margin:0px 46px 26px 0px;
+  padding:0px;
+}
+
 .sort-options,
 .sort-list {
   font-size:12px;
   line-height:18px;
+  margin:0px;
+  padding:0px;
+}
+
+.sort-options {
+  margin-right: 40px;
 }
 
 .sort-item {
   color: var(--basic-black);
   border-bottom: 1px dashed var(--basic-lowblue);
   opacity:0.3;
+  margin:0px 31px 0px 0px;
+}
+
+.sort-list li:nth-child(3) {
+  margin:0px 503px 0px 0px;
+  padding:0;
 }
 
 .active-sort-item {
@@ -569,6 +617,8 @@ input[type="radio"].visually-hidden {
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 10px solid var(--basic-lowblue);
+  margin:0;
+  padding:0;
 }
 
 .sort-up {
@@ -577,11 +627,13 @@ input[type="radio"].visually-hidden {
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-bottom: 10px solid var(--basic-graytriangle);
+  margin: 0px 12px 0px 0px;
+  padding: 0;
 }
 
 .sort-down,
 .sort-up {
-  display:inline-block;
+  display:flex;
 }
 
 .sort-down:hover {
@@ -612,27 +664,109 @@ input[type="radio"].visually-hidden {
   background-color:var(--basic-darkbrown);
   color: rgba(255,255,255, 0.3);
 }
+/*Grids*/
+
+.all-hotels {
+  display:grid;
+  grid-template-columns: repeat(5, 200px);
+
+}
+
+.picture-1 {
+  display:grid;
+  grid-column: 1/2;
+  grid-row:1/2;
+}
+
+.picture-2 {
+  display:grid;
+  grid-column: 1/2;
+  grid-row:2/3;
+}
+
+.picture-3 {
+  display:grid;
+  grid-column: 1/2;
+  grid-row:3/4;
+}
+
+.description-block-1 {
+  display:grid;
+  grid-column: 2/4;
+  grid-row:1/2;
+}
+
+.description-block-2 {
+  display:grid;
+  grid-column: 2/4;
+  grid-row:2/3;
+}
+
+.description-block-3 {
+  display:grid;
+  grid-column: 2/4;
+  grid-row:3/4;
+}
+
+.rating-block-1 {
+  display:grid;
+  grid-column: 6/6;
+  grid-row:1/2;
+}
+
+.rating-block-2 {
+  display:grid;
+  grid-column: 6/6;
+  grid-row:2/3;
+}
+
+.rating-block-3 {
+  display:grid;
+  grid-column: 6/6;
+  grid-row:3/4;
+}
+
+.description-block h2,
+.description-block p {
+  margin:0;
+  padding:0;
+}
+
+.all-hotels {
+  margin:0px 0px 30px 0px;
+  padding: 0px 0px 0px 73px
+}
+
+/*Horizontal Line*/
+
+.width-line {
+  border:none;
+  background:var(--basic-linecolor);
+  height:1px;
+  margin:0px 0px 30px 0px;
+  padding:0;
+}
 
 /* Rating*/
 
 .five-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
-  min-height:17px;
+  max-height:17px;
   width:76px;
 }
 
 .three-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
-  min-height:17px;
+  max-height:17px;
   width:57px;
 }
 
 .two-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
-  min-height:17px;
+  max-height:17px;
   width:38px;
   }
 
@@ -643,4 +777,5 @@ input[type="radio"].visually-hidden {
   height:27px;
   display:inline-block;
 }
+
 

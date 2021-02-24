@@ -664,73 +664,6 @@ input[type="radio"].visually-hidden {
   background-color:var(--basic-darkbrown);
   color: rgba(255,255,255, 0.3);
 }
-/*Grids*/
-
-.all-hotels {
-  display:grid;
-  grid-template-columns: repeat(5, 200px);
-
-}
-
-.picture-1 {
-  display:grid;
-  grid-column: 1/2;
-  grid-row:1/2;
-}
-
-.picture-2 {
-  display:grid;
-  grid-column: 1/2;
-  grid-row:2/3;
-}
-
-.picture-3 {
-  display:grid;
-  grid-column: 1/2;
-  grid-row:3/4;
-}
-
-.description-block-1 {
-  display:grid;
-  grid-column: 2/4;
-  grid-row:1/2;
-}
-
-.description-block-2 {
-  display:grid;
-  grid-column: 2/4;
-  grid-row:2/3;
-}
-
-.description-block-3 {
-  display:grid;
-  grid-column: 2/4;
-  grid-row:3/4;
-}
-
-.rating-block-1 {
-  display:grid;
-  grid-column: 6/6;
-  grid-row:1/2;
-}
-
-.rating-block-2 {
-  display:grid;
-  grid-column: 6/6;
-  grid-row:2/3;
-}
-
-.rating-block-3 {
-  display:grid;
-  grid-column: 6/6;
-  grid-row:3/4;
-}
-
-.description-block h2,
-.description-block p {
-  margin:0;
-  padding:0;
-}
 
 .all-hotels {
   margin:0px 0px 30px 0px;
@@ -752,21 +685,21 @@ input[type="radio"].visually-hidden {
 .five-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
-  max-height:17px;
+  min-height:17px;
   width:76px;
 }
 
 .three-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
-  max-height:17px;
+  min-height:17px;
   width:57px;
 }
 
 .two-stars {
   background-image: url("../img/star.svg");
   background-color: var(--basic-white);
-  max-height:17px;
+  min-height:17px;
   width:38px;
   }
 

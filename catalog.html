@@ -30,59 +30,58 @@
 
     <main class="container">
       <h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
-
-          <form class="filter-bgimage" action="https://echo.htmlacademy.ru/" method="POST">
-            <fieldset class="filter-item">
-              <legend class="legend-name">Инфраструктура:</legend>
-              <ul class="catalog-list">
-                <li class="catalog-item">
-                  <input type="checkbox" name="swimmingpool" id="swimmingpool" checked>
-                  <label for="swimmingpool">Бассейн</label>
-                </li>
-                <li class="catalog-item">
-                  <input type="checkbox" name="parking" id="parking">
-                  <label for="parking">Парковка</label>
-                </li>
-                <li class="catalog-item">
-                  <input type="checkbox" name="wi-fi" id="wi-fi">
-                  <label for="wi-fi">Wi-Fi</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter-item">
-              <legend class="legend-name">Тип жилья:</legend>
-              <ul class="catalog-list">
-                <li class="catalog-item">
-                  <input type="checkbox" name="hotel" id="hotel" checked>
-                  <label for="hotel">Гостиница</label>
-                </li>
-                <li class="catalog-item">
-                  <input type="checkbox" name="motel" id="motel" checked>
-                  <label for="motel">Мотель</label>
-                </li>
-                <li class="catalog-item">
-                  <input type="checkbox" name="apartment" id="apartment" checked>
-                  <label for="apartment">Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter-item">
-              <legend class="legend-name">Стоимость в сутки (Р):</legend>
-                <div class="range-filter">
-                  <div class="range-controls">
-                    <input type="number" name="min-price" placeholder="от 0">
-                    <input type="number" name="max-price" placeholder="до 15000">
-                    <div class="scale">
-                      <div class="bar"></div>
-                    </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
-                  </div>
-                  <div class="price-controls"> </div>
+      <form class="filter-bgimage" action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset class="filter-item">
+          <legend class="legend-name">Инфраструктура:</legend>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <input type="checkbox" name="swimmingpool" id="swimmingpool" checked>
+              <label for="swimmingpool">Бассейн</label>
+            </li>
+            <li class="catalog-item">
+              <input type="checkbox" name="parking" id="parking">
+              <label for="parking">Парковка</label>
+            </li>
+            <li class="catalog-item">
+              <input type="checkbox" name="wi-fi" id="wi-fi">
+              <label for="wi-fi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="legend-name">Тип жилья:</legend>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <input type="checkbox" name="hotel" id="hotel" checked>
+              <label for="hotel">Гостиница</label>
+            </li>
+            <li class="catalog-item">
+              <input type="checkbox" name="motel" id="motel" checked>
+              <label for="motel">Мотель</label>
+            </li>
+            <li class="catalog-item">
+              <input type="checkbox" name="apartment" id="apartment" checked>
+              <label for="apartment">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="legend-name">Стоимость в сутки (Р):</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <input type="number" name="min-price" placeholder="от 0">
+                <input type="number" name="max-price" placeholder="до 15000">
+                <div class="scale">
+                  <div class="bar"></div>
                 </div>
-              <button class="button-white" type="submit" name="show-hotels"> Показать</button>
-            </fieldset>
-          </form>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+              <div class="price-controls"> </div>
+            </div>
+          <button class="button-white" type="submit" name="show-hotels"> Показать</button>
+        </fieldset>
+      </form>
 
       <section class="search-results">
         <h2 class="visually-hidden">Результаты поиска гостиницы</h2>
@@ -100,8 +99,8 @@
         <hr class="width-line top-line-amara">
         <ul class="hotels-list">
           <li class="all-hotels">
-            <a class="picture-1" href="#"><img src="img/amara-resort-and-spa.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa"></a>
-            <div class="description-block-1 description-block">
+            <a href="#"><img src="img/amara-resort-and-spa.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa"></a>
+            <div class="description-block">
               <h2><a class="name-of-hotel" href="#">Amara Resort & Spa</a></h2>
               <p>Гостиница</p>
               <p>От 4000 Р.</p>
@@ -110,15 +109,15 @@
                 <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
-            <div class="rating-block-1">
+            <div class="rating-block">
               <div class="five-stars"></div>
               <p class="rating">Рейтинг: 8,5</p>
             </div>
           </li>
-          <hr class="width-line top-line-desert">
           <li class="all-hotels">
-            <a class="picture-2" href="#"><img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn"></a>
-            <div class="description-block-2 description-block">
+            <hr class="width-line top-line-desert">
+            <a href="#"><img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn"></a>
+            <div class="description-block">
               <h2><a class="name-of-hotel" href="#">Desert Quail Inn</a></h2>
               <p>Мотель</p>
               <p>От 3000 Р.</p>
@@ -127,15 +126,15 @@
                 <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
-            <div class="rating-block-2">
+            <div class="rating-block">
               <div class="three-stars"></div>
               <p class="rating">Рейтинг: 8,9</p>
             </div>
           </li>
-          <hr class="width-line">
           <li class="all-hotels">
-            <a class="picture-3" href="#"><img class="picture" src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo"></a>
-            <div class="description-block-3 description-block">
+            <hr class="width-line">
+            <a href="#"><img class="picture" src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo"></a>
+            <div class="description-block">
               <h2><a class="name-of-hotel" href="#">Villas at Poco Diablo</a></h2>
               <p>Апартаменты</p>
               <p>От 2000 Р.</p>
@@ -144,13 +143,13 @@
                 <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
-            <div class="rating-block-3">
+            <div class="rating-block">
               <div class="two-stars"></div>
               <p class="rating">Рейтинг: 9,2</p>
             </div>
           </li>
-          <hr class="width-line">
         </ul>
+        <hr class="width-line">
       </section>
 
     </main>

@@ -99,14 +99,26 @@ img {
 
 /* Main Navigation*/
 
+.main-header {
+  min-height:56px;
+}
 
 .site-navigation {
   list-style:none;
   font-family: "PT Sans Bold", "Arial", sans-serif;
+  margin:0;
+  padding:0;
+  display:flex;
+  min-width:100%;
+  justify-content:space-around;
+  align-items:center;
 }
 
 .site-navigation a {
+  display:flex;
   color: var(--basic-black);
+  padding:10px;
+  align-self:center;
 }
 
 .site-navigation a:hover {
@@ -116,6 +128,18 @@ img {
 .site-navigation a:active {
   color:var(--basic-black);
   opacity: 0.3;
+}
+
+.main-navigation {
+  display:flex;
+  position:relative;
+  min-width:1200px;
+}
+
+.main-header-logo {
+  position:absolute;
+  top:0;
+  left: 550px;
 }
 
 /* Main Countainer */
@@ -217,17 +241,27 @@ input[type="radio"].visually-hidden {
 
 /* Features Three, Four And Five*/
 
-.bg-gray {
-  background-color: var(--basic-backgroundcolorgray);
+.feature-three-five {
+  margin:0;
+  padding:0;
+  text-align:center;
+  list-style:none;
+  max-width:250px;
 }
 
-.feature-three-five {
-  margin: 0;
-  padding: 0;
-  text-align:center;
-  margin-bottom: 58px;
-  padding: 47px 0px 54px 0px;
-  list-style:none;
+.feature-three-five:nth-child(2) {
+  max-width:260px;
+}
+
+.advantages-description {
+  background-color: var(--basic-backgroundcolorgray);
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+  margin:0;
+  padding:0;
+  min-height:256px;
 }
 
 /* Searching Hotels in Sedona*/
@@ -307,10 +341,11 @@ input[type="radio"].visually-hidden {
 /* Footer*/
 
 .main-footer {
-  display: grid;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
   margin:0;
   padding:0;
-  grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--basic-white);
   max-height:120px;
   opacity:0.9;

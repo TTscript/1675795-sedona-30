@@ -109,16 +109,37 @@ img {
   margin:0;
   padding:0;
   display:flex;
-  min-width:100%;
-  justify-content:space-around;
   align-items:center;
+  min-height:56px;
+  justify-content:space-between;
 }
 
 .site-navigation a {
-  display:flex;
   color: var(--basic-black);
-  padding:10px;
-  align-self:center;
+}
+
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(2) {
+  display:flex;
+  justify-content:flex-start;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+  display:flex;
+  justify-content:flex-end;
+}
+
+.site-navigation li {
+  min-width:250px;
+}
+
+.site-navigation li:first-child {
+  padding-left:73px;
+}
+
+.site-navigation li:last-child {
+  padding-right:73px;
 }
 
 .site-navigation a:hover {
@@ -131,15 +152,13 @@ img {
 }
 
 .main-navigation {
-  display:flex;
   position:relative;
-  min-width:1200px;
 }
 
 .main-header-logo {
   position:absolute;
-  top:0;
-  left: 550px;
+  left:50%;
+  transform:translate(-50%, -56px);
 }
 
 /* Main Countainer */
@@ -159,16 +178,15 @@ input[type="radio"].visually-hidden {
   overflow:hidden;
 }
 
-.welcome-div {
-  justify-self: center;
-}
-
 .mountain-background {
   background: url("../img/back/main-background-photo.jpg") no-repeat;
   background-color: var(--basic-brown);
   min-height:509px;
   margin-bottom: 42px;
- }
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
 .about-sedona {
   margin-bottom:51px;
@@ -184,23 +202,22 @@ input[type="radio"].visually-hidden {
 .sedona-town,
 .simple-text {
   text-align:center;
+  margin:0;
+  padding:0;
+}
+
+.sedona-town {
+  margin-bottom:16px;
 }
 
 /* Sedona Features*/
 
 /* Feature One And Two*/
 
-.feature-one-two {
-  background-color: var(--basic-lowblue);
-  width:400px;
-  min-height:256px;
-}
-
-.feature-item h3 {
-  font-family: "PT Sans Bold", "Arial", sans-serif;
-  color: var(--basic-black);
-  font-size:21px;
-  line-height:21px;
+.features-list .feature-item:first-of-type {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 
 .features-list,
@@ -210,58 +227,85 @@ input[type="radio"].visually-hidden {
   padding:0;
 }
 
+.feature-one-two {
+  background-color: var(--basic-lowblue);
+  width:400px;
+  min-height:256px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-item h3 {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: var(--basic-black);
+  font-size:21px;
+  line-height:21px;
+  margin:0px 0px 0px 0px;
+}
+
+.features-underlist .feature-item {
+  max-width:300px;
+  margin: 0 0 54px 0;
+}
+
+.features-underlist {
+  display:flex;
+  text-align: center;
+}
+
+ol > .feature-item:first-of-type > .feature-one-two,
+ol > .feature-item:first-of-type > .picture-description {
+  margin-bottom:50px;
+}
+
 .feature-one-two p,
 .feature-one-two h3 {
   color: var(--basic-white);
   text-align:center;
+  margin:0;
 }
 
-.index-column-1 {
-  display:grid;
-  min-height:256px;
-  grid-template-columns: 400px 800px;
-  margin-bottom:61px;
+ol > .feature-item:nth-of-type(2) > .feature-one-two {
+  order:2;
 }
 
-.first-item {
-  margin-bottom:87px;
+ol > .feature-item:nth-of-type(2) > .picture-description {
+  order:1;
 }
 
-.features-underlist {
-  display:grid;
-  grid-template-columns: repeat(3, 400px);
-  text-align:center;
+.feature-one-two h3 {
+  padding-top:47px;
+  margin-bottom:25px;
 }
 
-.index-column-2 {
-  display:grid;
-  min-height:256px;
-  grid-template-columns: 800px 400px;
+.features-list > .feature-item:nth-of-type(2) {
+  display:flex;
+}
+
+.feature-one-two p:nth-child(2),
+.feature-three-five p:nth-child(2) {
+  margin-bottom: 23px;
 }
 
 /* Features Three, Four And Five*/
 
 .feature-three-five {
-  margin:0;
-  padding:0;
+  display:inline-flex;
+  flex-direction: column;
+  background-color: var(--basic-backgroundcolorgray);
+  padding:47px 0px 54px 0px;
   text-align:center;
   list-style:none;
-  max-width:250px;
-}
-
-.feature-three-five:nth-child(2) {
-  max-width:260px;
-}
-
-.advantages-description {
-  background-color: var(--basic-backgroundcolorgray);
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-  align-items:center;
   margin:0;
-  padding:0;
-  min-height:256px;
+  min-width:33.5%
+}
+
+.feature-three-five {
+  margin-left: -10px;
+}
+
+.feature-three-five:last-child {
+  padding-right:15px;
 }
 
 /* Searching Hotels in Sedona*/
@@ -347,7 +391,6 @@ input[type="radio"].visually-hidden {
   margin:0;
   padding:0;
   background-color: var(--basic-white);
-  max-height:120px;
   opacity:0.9;
 }
 

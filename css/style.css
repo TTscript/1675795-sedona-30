@@ -107,7 +107,7 @@ img {
   list-style:none;
   font-family: "PT Sans Bold", "Arial", sans-serif;
   margin:0;
-  padding:0;
+  padding:0px 73px 0px 73px;
   display:flex;
   align-items:center;
   min-height:56px;
@@ -120,26 +120,16 @@ img {
 
 .site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
-  display:flex;
-  justify-content:flex-start;
+text-align:left;
 }
 
 .site-navigation li:nth-child(3),
 .site-navigation li:nth-child(4) {
-  display:flex;
-  justify-content:flex-end;
+text-align:right;
 }
 
 .site-navigation li {
   min-width:250px;
-}
-
-.site-navigation li:first-child {
-  padding-left:73px;
-}
-
-.site-navigation li:last-child {
-  padding-right:73px;
 }
 
 .site-navigation a:hover {
@@ -157,8 +147,9 @@ img {
 
 .main-header-logo {
   position:absolute;
+  top:0;
   left:50%;
-  transform:translate(-50%, -56px);
+  transform:translate(-50%);
 }
 
 /* Main Countainer */
@@ -214,10 +205,19 @@ input[type="radio"].visually-hidden {
 
 /* Feature One And Two*/
 
-.features-list .feature-item:first-of-type {
+.features-list {
   display:flex;
-  flex-wrap:wrap;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features-list .wraper-feature-one,
+.features-list .wraper-feature-two {
+  width:100%;
+}
+
+.feature-one-two {
+  display: flex;
+  max-height:256px;
 }
 
 .features-list,
@@ -227,12 +227,10 @@ input[type="radio"].visually-hidden {
   padding:0;
 }
 
-.feature-one-two {
+.blue-block {
   background-color: var(--basic-lowblue);
   width:400px;
-  min-height:256px;
-  display: flex;
-  flex-direction: column;
+  padding:47px 0px 0px 0px;
 }
 
 .feature-item h3 {
@@ -240,7 +238,7 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   font-size:21px;
   line-height:21px;
-  margin:0px 0px 0px 0px;
+  margin:0;
 }
 
 .features-underlist .feature-item {
@@ -250,12 +248,20 @@ input[type="radio"].visually-hidden {
 
 .features-underlist {
   display:flex;
+  justify-content: space-around;
   text-align: center;
 }
 
-ol > .feature-item:first-of-type > .feature-one-two,
-ol > .feature-item:first-of-type > .picture-description {
+.features-list > .feature-item:first-of-type > .feature-one-two,
+.features-list > .feature-item:first-of-type > .picture-description {
   margin-bottom:50px;
+}
+
+.wraper-feature-two img {
+  order: 1;
+}
+.wraper-feature-two .blue-block {
+order:2;
 }
 
 .feature-one-two p,
@@ -265,21 +271,8 @@ ol > .feature-item:first-of-type > .picture-description {
   margin:0;
 }
 
-ol > .feature-item:nth-of-type(2) > .feature-one-two {
-  order:2;
-}
-
-ol > .feature-item:nth-of-type(2) > .picture-description {
-  order:1;
-}
-
 .feature-one-two h3 {
-  padding-top:47px;
   margin-bottom:25px;
-}
-
-.features-list > .feature-item:nth-of-type(2) {
-  display:flex;
 }
 
 .feature-one-two p:nth-child(2),
@@ -297,15 +290,7 @@ ol > .feature-item:nth-of-type(2) > .picture-description {
   text-align:center;
   list-style:none;
   margin:0;
-  min-width:33.5%
-}
-
-.feature-three-five {
-  margin-left: -10px;
-}
-
-.feature-three-five:last-child {
-  padding-right:15px;
+  width:33.33%
 }
 
 /* Searching Hotels in Sedona*/

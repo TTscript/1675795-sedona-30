@@ -149,7 +149,7 @@ text-align:right;
   position:absolute;
   top:0;
   left:50%;
-  transform:translate(-50%);
+  transform:translate(-50%, 0);
 }
 
 /* Main Countainer */
@@ -215,7 +215,7 @@ input[type="radio"].visually-hidden {
   width:100%;
 }
 
-.feature-one-two {
+.picture-wrapper {
   display: flex;
   max-height:256px;
 }
@@ -230,7 +230,11 @@ input[type="radio"].visually-hidden {
 .blue-block {
   background-color: var(--basic-lowblue);
   width:400px;
-  padding:47px 0px 0px 0px;
+  padding:47px 40px 10px 40px;
+}
+
+.feature-item {
+  width:100%;
 }
 
 .feature-item h3 {
@@ -252,37 +256,36 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.features-list > .feature-item:first-of-type > .feature-one-two,
-.features-list > .feature-item:first-of-type > .picture-description {
+.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
   margin-bottom:50px;
 }
 
-.wraper-feature-two img {
+.picture-wrapper-rtl img {
   order: 1;
 }
-.wraper-feature-two .blue-block {
+
+.picture-wrapper-rtl .blue-block {
 order:2;
 }
 
-.feature-one-two p,
-.feature-one-two h3 {
+.picture-wrapper p,
+.picture-wrapper h3 {
   color: var(--basic-white);
   text-align:center;
   margin:0;
 }
 
-.feature-one-two h3 {
+.picture-wrapper h3 {
   margin-bottom:25px;
 }
 
-.feature-one-two p:nth-child(2),
-.feature-three-five p:nth-child(2) {
+.picture-wrapper p:nth-child(2) {
   margin-bottom: 23px;
 }
 
 /* Features Three, Four And Five*/
 
-.feature-three-five {
+.feature-item-small {
   display:inline-flex;
   flex-direction: column;
   background-color: var(--basic-backgroundcolorgray);
@@ -479,34 +482,13 @@ order:2;
 /*Filters */
 
 .filter-bgimage {
+  display:flex;
   background: url("../img/back/filter-background-image.png") no-repeat;
   background-color:var(--basic-lowgray);
   min-height: 217px;
   color:var(--basic-white);
-  margin:0px 0px 30px 0px;
+  margin:0px 0px 35px 0px;
   padding: 0;
-}
-
-.filter-item:last-child {
-  grid-column:5/7;
-}
-
-.catalog-item {
-  padding:0px;
-  margin:0px 0px 25px 0px;
-}
-
-.catalog-item:last-child {
-  margin:0px;
-  padding:0px;
-}
-
-.legend-name {
-  font-family: "PT Sans Bold", "Arial", sans-serif;
-  font-size:16px;
-  line-height:21px;
-  margin:0px 0px 24px 0px;
-  padding: 27px 0px 0px 72px;
 }
 
 .filter-item {
@@ -515,9 +497,42 @@ order:2;
   border:none;
 }
 
-.range-fiter {
-  width:317px;
-  margin-top:20px;
+.infrastructure-block {
+  padding-left:73px;
+  margin-right:119px;
+}
+
+.scale-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.scale-block {
+  margin:0px 73px 0px auto;
+}
+
+.legend-name {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size:16px;
+  line-height:21px;
+  margin:0px 0px 24px 0px;
+  padding:26px 0px 0px 0px;
+}
+
+.catalog-list {
+  list-style:none;
+  padding: 0;
+  margin:0;
+}
+
+.catalog-list .catalog-item:last-of-type {
+  padding: 0;
+  margin:0;
+}
+
+.catalog-item {
+  padding:0;
+  margin:0px 0px 25px 0px;
 }
 
 .range-controls {
@@ -581,7 +596,8 @@ order:2;
   font:inherit;
   text-transform:inherit;
   background-color: transparent;
-  display:inline-block;
+  min-width:137px;
+  align-self:center;
 }
 
 .button-white:hover {
@@ -599,12 +615,6 @@ order:2;
   color: var(--basic-black);
 }
 
-.catalog-list {
-  list-style:none;
-  padding: 0px 0px 0px 72px;
-  margin:0px;
-}
-
 .sort-block {
   padding: 0px 0px 0px 73px;
   margin:0px;
@@ -615,14 +625,35 @@ order:2;
   display:flex;
 }
 
+.description-block h2 {
+  margin:0;
+}
+
+.description-block p:not(.description-buttons){
+  display: inline;
+}
+
 .hotels-list,
 .sort-list {
   list-style:none;
 }
 
 .hotels-list {
+  display:flex;
+  flex-wrap: wrap;
   margin:0;
   padding:0;
+}
+
+.all-hotels {
+  display: flex;
+  width:100%;
+  margin:0px 0px 30px 0px;
+  padding: 0px 0px 0px 73px;
+}
+
+.all-hotels img {
+  margin-right: 30px;
 }
 
 .sort-block h3 {
@@ -725,21 +756,6 @@ order:2;
   color: rgba(255,255,255, 0.3);
 }
 
-.all-hotels {
-  margin:0px 0px 30px 0px;
-  padding: 0px 0px 0px 73px
-}
-
-/*Horizontal Line*/
-
-.width-line {
-  border:none;
-  background:var(--basic-linecolor);
-  height:1px;
-  margin:0px 0px 30px 0px;
-  padding:0;
-}
-
 /* Rating*/
 
 .five-stars {
@@ -763,12 +779,18 @@ order:2;
   width:38px;
   }
 
-.rating {
+ .rating {
   color: var(--basic-lowgray);
   background-color:var(--basic-backgroundcolor);
   min-width:110px;
   height:27px;
-  display:inline-block;
 }
+
+.rating-block {
+  display: flex;
+  flex-direction: column;
+  margin:0px 72px 0px auto;
+}
+
 
 

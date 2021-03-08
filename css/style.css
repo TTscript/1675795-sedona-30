@@ -637,8 +637,9 @@ order:2;
   margin:0px 31px 0px 0px;
 }
 
-.sort-list {
-  flex-grow: 1;
+.up-down-buttons {
+  display: flex;
+  margin: 0px 0px 0px auto;
 }
 
 .sort-list li:last-of-type {

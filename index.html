@@ -29,10 +29,13 @@
 
     <main class="container">
       <section class="about-sedona">
-          <h1 class="visually-hidden">Седона. Сайт туристического городка в штате Аризона.</h1>
-          <div class="mountain-background">
-            <img class="welcome-text" src="img/welcome-text.svg" width="457" height="351" alt="Welcome to the gorgeous SEDONA">
-          </div>
+        <h1 class="visually-hidden">Седона. Сайт туристического городка в штате Аризона.</h1>
+        <div class="mountain-background">
+          <img class="welcome-text" src="img/welcome-text.svg" width="457" height="351" alt="Welcome to the gorgeous SEDONA">
+          <svg width="1200" height="57" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" fill="#fff"/>
+          </svg>
+        </div>
         <p class="sedona-town">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="simple-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
@@ -51,15 +54,15 @@
             </div>
             <ul class="features-underlist">
               <li class="feature-item">
-                <h3>Жильё</h3>
+                <h3 class="house-decor-img">Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="feature-item">
-                <h3>Еда</h3>
+                <h3 class="food-decor-img">Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="feature-item">
-                <h3>Сувениры</h3>
+                <h3 class="souvenir-decor-img">Сувениры</h3>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
             </ul>
@@ -98,19 +101,19 @@
         <p class="date-of-travel">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <div class="form-window">
           <button class="button big-brown-button" type="button" value="ПОИСК ГОСТИНИЦЫ В седоне">ПОИСК ГОСТИНИЦЫ В седоне</button>
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="POST">
-              <p class="search-item">
-                <label>Дата заезда:<input type="date" name="data-v" value="2017-04-24"></label>
-              </p>
-              <p class="search-item">
-                <label>Дата выезда:<input type="date" name="date-iz" value="2017-07-04"></label>
-              </p>
-              <p class="search-item">
-                <label>Взрослые:<input type="number" name="adult" placeholder="2"></label>
-                <label>Дети:<input type="number" name="children" placeholder="0"></label>
-              </p>
-              <button class="button big-blue-button" type="submit" name="search" value="search">Найти</button>
-            </form>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="POST">
+            <p class="search-item arrival-departure">
+              <label><span>Дата заезда:</span><input class="form-date" type="date" name="date-of-arrival" value="2017-04-24"></label>
+            </p>
+            <p class="search-item arrival-departure">
+              <label><span>Дата выезда:</span><input class="form-date" type="date" name="date-of-departure" value="2017-07-04"></label>
+            </p>
+            <p class="search-item adult-children">
+              <label><span>Взрослые:</span><input class="number-of-persons adult" type="number" name="adult" placeholder="2"></label>
+              <label><span>Дети:</span><input class="number-of-persons children" type="number" name="children" placeholder="0"></label>
+            </p>
+            <button class="button big-blue-button" type="submit" name="search" value="search">Найти</button>
+          </form>
         </div>
         <img class="main-map" src="img/map.png" width="1199" height="594" alt="Карта">
       </section>

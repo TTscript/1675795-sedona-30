@@ -175,19 +175,17 @@ input[type="radio"].visually-hidden {
   min-height:509px;
   margin-bottom: 42px;
   display:flex;
+  flex-direction: column;
   align-items:center;
-  justify-content:center;
+  justify-content:space-between;
+}
+
+.welcome-text {
+  padding: 77px 0px 0px 0px;
 }
 
 .about-sedona {
   margin-bottom:51px;
-}
-
-.about-sedona .sedona-town {
-  font-family: "PT Sans Bold", "Arial", sans-serif;
-  font-size:21px;
-  line-height: 26px;
-  color: var(--basic-black);
 }
 
 .sedona-town,
@@ -198,7 +196,11 @@ input[type="radio"].visually-hidden {
 }
 
 .sedona-town {
-  margin-bottom:16px;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-size:21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  margin-bottom:55px;
 }
 
 /* Sedona Features*/
@@ -210,14 +212,8 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
 
-.features-list .wraper-feature-one,
-.features-list .wraper-feature-two {
-  width:100%;
-}
-
-.picture-wrapper {
-  display: flex;
-  max-height:256px;
+.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
+  margin-bottom:50px;
 }
 
 .features-list,
@@ -225,6 +221,11 @@ input[type="radio"].visually-hidden {
   list-style:none;
   margin:0;
   padding:0;
+}
+
+.picture-wrapper {
+  display: flex;
+  max-height:256px;
 }
 
 .blue-block {
@@ -245,19 +246,39 @@ input[type="radio"].visually-hidden {
   margin:0;
 }
 
+.house-decor-img::before {
+  content: url('../img/decoration-elements/dec-elem-living-house.svg');
+}
+
+.food-decor-img::before {
+  content: url('../img/decoration-elements/dec-elem-food.svg');
+  display: flex;
+}
+
+.souvenir-decor-img::before {
+  content: url('../img/decoration-elements/dec-elem-souvenirs.svg');
+  display: flex;
+}
+
+.house-decor-img::before,
+.food-decor-img::before,
+.souvenir-decor-img::before {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 28px 0px;
+}
+
 .features-underlist .feature-item {
+  display: flex;
+  flex-direction: column;
   max-width:300px;
-  margin: 0 0 54px 0;
+  margin: 0px 0px 54px 0px;
 }
 
 .features-underlist {
   display:flex;
   justify-content: space-around;
   text-align: center;
-}
-
-.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
-  margin-bottom:50px;
 }
 
 .picture-wrapper-rtl img {
@@ -275,7 +296,14 @@ order:2;
   margin:0;
 }
 
+.blue-block {
+  display: flex;
+  flex-direction: column;
+}
+
 .picture-wrapper h3 {
+  align-self: center;
+  width: 47%;
   margin-bottom:25px;
 }
 
@@ -293,7 +321,17 @@ order:2;
   text-align:center;
   list-style:none;
   margin:0;
-  width:33.33%
+  width:33.33%;
+}
+
+.feature-item-small h3 {
+  align-self: center;
+  width:30%;
+}
+
+.feature-item-small p {
+  align-self: center;
+  width:64.5%;
 }
 
 /* Searching Hotels in Sedona*/
@@ -305,15 +343,15 @@ order:2;
   line-height:30px;
 }
 
-.search-of-hotel {
-  text-align: center;
-  line-height: 24px;
-}
-
 .date-of-travel {
   line-height:24px;
   margin: 0px 383px;
   margin-bottom: 24px;
+}
+
+.search-of-hotel {
+  text-align: center;
+  line-height: 24px;
 }
 
 .form-window {
@@ -368,6 +406,45 @@ order:2;
 
 .search-item {
   margin:55px 41px;
+}
+
+.arrival-departure span {
+  margin: 0px 21px 0px 0px;
+}
+
+.form-date {
+  background-color: var(--basic-backgroundcolor);
+  border:none;
+  min-width:346px;
+  min-height:38px;
+}
+
+.number-of-persons {
+  background-color: var(--basic-backgroundcolor);
+  border:none;
+  width:114px;
+  min-height:38px;
+}
+
+.number-of-persons::placeholder {
+  text-align: center;
+  color:black;
+}
+
+.adult-children {
+  margin:0px 0px 54px 0px;
+}
+
+.adult-children label:first-of-type span {
+  margin: 0px 42px 0px 0px;
+}
+
+.adult-children label:last-of-type span {
+  margin: 0px 24px 0px 0px;
+}
+
+.adult {
+  margin:0px 53px 0px 0px;
 }
 
 /* Footer*/
@@ -484,11 +561,10 @@ order:2;
 .filter-bgimage {
   display:flex;
   background: url("../img/back/filter-background-image.png") no-repeat;
-  background-color:var(--basic-lowgray) no-repeat;
-  min-height: 217px;
+  background-color:var(--basic-lowgray);
   color:var(--basic-white);
-  margin:0;
-  padding: 26px 73px 11px 73px;
+  margin:0px 0px 35px 0px;
+  padding: 26px 73px 32px 73px;
 }
 
 .filter-item {
@@ -719,7 +795,13 @@ order:2;
   display:flex;
   flex-wrap: wrap;
   margin:0;
-  padding:0px 73px 0px 73px;
+  padding:0;
+}
+
+.hotels-list li {
+  margin:0;
+  padding: 0px 73px 0px 73px;
+  border: 0;
 }
 
 .hotels-list,

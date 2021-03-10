@@ -83,7 +83,7 @@ img {
   display:inline-block;
   vertical-align:middle;
   outline:none;
-  border:0px;
+  border:0;
   margin:0;
   padding:0;
 }
@@ -116,20 +116,27 @@ img {
 
 .site-navigation a {
   color: var(--basic-black);
+  margin: 0;
+}
+
+.site-navigation li {
+  min-width:225px;
+  margin: 0;
+}
+
+.site-navigation li:nth-child(2),
+.site-navigation li:nth-child(3) {
+  width:70%;
 }
 
 .site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
-text-align:left;
+  text-align:left;
 }
 
 .site-navigation li:nth-child(3),
 .site-navigation li:nth-child(4) {
-text-align:right;
-}
-
-.site-navigation li {
-  min-width:250px;
+  text-align:right;
 }
 
 .site-navigation a:hover {
@@ -173,7 +180,7 @@ input[type="radio"].visually-hidden {
   background: url("../img/back/main-background-photo.jpg") no-repeat;
   background-color: var(--basic-brown);
   min-height:509px;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
   display:flex;
   flex-direction: column;
   align-items:center;
@@ -185,7 +192,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-sedona {
-  margin-bottom:51px;
+  margin-bottom:55px;
 }
 
 .sedona-town,
@@ -201,26 +208,29 @@ input[type="radio"].visually-hidden {
   line-height: 26px;
   color: var(--basic-black);
   margin-bottom:55px;
+  width:50%;
+  margin:0px auto 47px auto;
 }
 
 /* Sedona Features*/
 
 /* Feature One And Two*/
 
-.features-list {
-  display:flex;
-  flex-wrap: wrap;
-}
-
-.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
-  margin-bottom:50px;
-}
-
 .features-list,
 .features-underlist {
   list-style:none;
   margin:0;
   padding:0;
+}
+
+.features-list {
+  display:flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
+  margin-bottom:62px;
 }
 
 .picture-wrapper {
@@ -232,6 +242,8 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-lowblue);
   width:400px;
   padding:47px 40px 10px 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-item {
@@ -243,11 +255,21 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   font-size:21px;
   line-height:21px;
-  margin:0;
+  margin:0px 0px 12px 0px;
+}
+
+.house-decor-img::before,
+.food-decor-img::before,
+.souvenirs-decor-img::before {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px 0px 25px 0px;
 }
 
 .house-decor-img::before {
   content: url('../img/decoration-elements/dec-elem-living-house.svg');
+  margin-top:-4px;
 }
 
 .food-decor-img::before {
@@ -255,30 +277,24 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.souvenir-decor-img::before {
+.souvenirs-decor-img::before {
   content: url('../img/decoration-elements/dec-elem-souvenirs.svg');
   display: flex;
-}
-
-.house-decor-img::before,
-.food-decor-img::before,
-.souvenir-decor-img::before {
-  display: flex;
-  justify-content: center;
-  margin: 0px 0px 28px 0px;
+  margin:-10px 0px 27px 0px;
 }
 
 .features-underlist .feature-item {
   display: flex;
   flex-direction: column;
   max-width:300px;
-  margin: 0px 0px 54px 0px;
+
 }
 
 .features-underlist {
   display:flex;
   justify-content: space-around;
   text-align: center;
+  margin:0px 0px 68px 0px;
 }
 
 .picture-wrapper-rtl img {
@@ -286,7 +302,7 @@ input[type="radio"].visually-hidden {
 }
 
 .picture-wrapper-rtl .blue-block {
-order:2;
+  order:2;
 }
 
 .picture-wrapper p,
@@ -294,11 +310,6 @@ order:2;
   color: var(--basic-white);
   text-align:center;
   margin:0;
-}
-
-.blue-block {
-  display: flex;
-  flex-direction: column;
 }
 
 .picture-wrapper h3 {
@@ -334,6 +345,10 @@ order:2;
   width:64.5%;
 }
 
+.order-number {
+  margin-bottom:10px;
+}
+
 /* Searching Hotels in Sedona*/
 
 .youre-interested {
@@ -341,12 +356,19 @@ order:2;
   color: var(--basic-black);
   font-size:30px;
   line-height:30px;
+  margin-left:-11px;
 }
 
 .date-of-travel {
   line-height:24px;
-  margin: 0px 383px;
-  margin-bottom: 24px;
+  margin: 0px auto;
+  margin-bottom:44px;
+  width:25%;
+}
+
+.date-of-travel span {
+  white-space: nowrap;
+  margin:0px 0px 0px -68px;
 }
 
 .search-of-hotel {
@@ -354,12 +376,21 @@ order:2;
   line-height: 24px;
 }
 
+/* Map */
+
+.main-map {
+  margin:0;
+  padding:0;
+}
+
+/*Form Windom*/
+
 .form-window {
+  position:relative;
   margin: 0px auto;
   padding:0px;
   background-color:var(--basic-white);
   width:568px;
-  position:relative;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
@@ -382,48 +413,44 @@ order:2;
   color: rgba(255,255,255, 0.3);
 }
 
-.big-blue-button {
-  font-size:21px;
-  line-height:26px;
-  min-width:458px;
-  min-height:58px;
-  margin:0;
-  padding:0;
-  margin-bottom:55px;
-}
-
 .search-form {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   color:var(--basic-black);
-  width:568px;
   line-height:26px;
   position: absolute;
   left:0;
   top:100%;
   background-color: var(--basic-white);
-  min-height:395px;
+  margin:0;
+  padding:55px 55px 55px 55px;
 }
 
-.search-item {
-  margin:55px 41px;
+.arrival-departure {
+  padding:0;
+  margin:0px 0px 29px 0px;
+  text-align: left;
 }
 
-.arrival-departure span {
-  margin: 0px 21px 0px 0px;
+.arrival-date-text {
+  margin: 0px 23px 0px 0px;
+}
+
+.departure-date-text {
+  margin: 0px 19px 0px 0px;
 }
 
 .form-date {
   background-color: var(--basic-backgroundcolor);
   border:none;
-  min-width:346px;
-  min-height:38px;
+  min-height: 38px;
+  min-width: 346px;
 }
 
 .number-of-persons {
   background-color: var(--basic-backgroundcolor);
   border:none;
-  width:114px;
-  min-height:38px;
+  max-width:112px;
+  min-height:39px;
 }
 
 .number-of-persons::placeholder {
@@ -433,34 +460,58 @@ order:2;
 
 .adult-children {
   margin:0px 0px 54px 0px;
+  text-align: left;
 }
 
-.adult-children label:first-of-type span {
-  margin: 0px 42px 0px 0px;
+.adult-persons-text {
+  margin: 0px 39px 0px 0px;
 }
 
-.adult-children label:last-of-type span {
+.children-persons-text {
   margin: 0px 24px 0px 0px;
 }
 
 .adult {
-  margin:0px 53px 0px 0px;
+  margin:0px 49px 0px 0px;
+}
+
+.big-blue-button {
+  font-size:21px;
+  line-height:26px;
+  min-width:458px;
+  min-height:58px;
+  padding:0;
+  margin: 0;
 }
 
 /* Footer*/
 
 .main-footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items:center;
   margin:0;
-  padding:0;
+  padding:0px 138px 0px 111px;
   background-color: var(--basic-white);
   opacity:0.9;
+  margin-top:-127px;
 }
 
 /* Contacts */
 
+.contact-information {
+  text-align: center;
+  padding:0px 0px 30px 14px;
+}
+
+.contact-information p {
+  margin:0;
+  padding:0;
+}
+
+.contact-information .tag-visitsedona {
+  padding:10px;
+}
 .tag-visitsedona,
 .contacts-phone {
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -472,7 +523,13 @@ order:2;
 /* Social Buttons*/
 
 .social-list {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:6px;
+  max-width:102px;
   list-style:none;
+  padding:0;
+  margin:-5px 0px 0px -63px;
 }
 
 .social-button {
@@ -480,7 +537,6 @@ order:2;
   display:inline-block;
   min-width:46px;
   min-height:48px;
-  margin:1px;
 }
 
 .social-button:hover {
@@ -528,16 +584,12 @@ order:2;
 /* Copyright*/
 
 .footer-copyright {
+  display: flex;
   line-height:26px;
 }
 
-.social-list {
-  display:grid;
-  margin:0;
-  padding:0;
-  grid-template-columns: repeat(3, 1fr);
-  gap:6px;
-  max-width:102px;
+.footer-copyright span {
+  padding:10px 7px 0px 0px;
 }
 
 .html-academy-logo:hover svg{
@@ -875,3 +927,10 @@ order:2;
   min-width:110px;
   height:27px;
 }
+
+/*
+button, label, p, input, span, h1,h2,h3,h4,h5,h6, .arrival-departure {
+  margin:0;
+  padding:0;
+}
+*/

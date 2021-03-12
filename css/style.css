@@ -64,6 +64,7 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   min-height:100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 a {
@@ -85,7 +86,7 @@ img {
   outline:none;
   border:0;
   margin:0;
-  padding:0;
+  padding:0px 5px 0px 5px;
 }
 
 .button:hover {
@@ -107,7 +108,7 @@ img {
   list-style:none;
   font-family: "PT Sans Bold", "Arial", sans-serif;
   margin:0;
-  padding:0px 73px 0px 73px;
+  padding:0px 72px 0px 73px;
   display:flex;
   align-items:center;
   min-height:56px;
@@ -124,15 +125,19 @@ img {
   margin: 0;
 }
 
-.site-navigation li:nth-child(2),
-.site-navigation li:nth-child(3) {
-  width:70%;
-}
-
 .site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
   text-align:left;
 }
+
+.site-navigation li:nth-child(2),
+.site-navigation li:nth-child(3) {
+  width:70%;
+}
+.site-navigation li:nth-child(1) {
+margin-right:3px;
+}
+
 
 .site-navigation li:nth-child(3),
 .site-navigation li:nth-child(4) {
@@ -157,6 +162,7 @@ img {
   top:0;
   left:50%;
   transform:translate(-50%, 0);
+  z-index: 2;
 }
 
 /* Main Countainer */
@@ -180,15 +186,22 @@ input[type="radio"].visually-hidden {
   background: url("../img/back/main-background-photo.jpg") no-repeat;
   background-color: var(--basic-brown);
   min-height:509px;
-  margin-bottom: 41px;
+  margin-bottom: 43px;
   display:flex;
   flex-direction: column;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
+  position: relative;
+  z-index: 1;
 }
 
-.welcome-text {
-  padding: 77px 0px 0px 0px;
+.mountain-background::after {
+  content: url("../img/back/cut-main-background-photo.svg");
+  z-index: 3;
+  position: absolute;
+  height: 57px;
+  bottom: 0;
+  left: 0;
 }
 
 .about-sedona {
@@ -226,24 +239,7 @@ input[type="radio"].visually-hidden {
 .features-list {
   display:flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
-  margin-bottom:62px;
-}
-
-.picture-wrapper {
-  display: flex;
-  max-height:256px;
-}
-
-.blue-block {
-  background-color: var(--basic-lowblue);
-  width:400px;
-  padding:47px 40px 10px 40px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 52px;
 }
 
 .feature-item {
@@ -255,46 +251,35 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   font-size:21px;
   line-height:21px;
-  margin:0px 0px 12px 0px;
-}
-
-.house-decor-img::before,
-.food-decor-img::before,
-.souvenirs-decor-img::before {
-  display: flex;
-  justify-content: center;
-  padding: 0px;
-  margin: 0px 0px 25px 0px;
-}
-
-.house-decor-img::before {
-  content: url('../img/decoration-elements/dec-elem-living-house.svg');
-  margin-top:-4px;
-}
-
-.food-decor-img::before {
-  content: url('../img/decoration-elements/dec-elem-food.svg');
-  display: flex;
-}
-
-.souvenirs-decor-img::before {
-  content: url('../img/decoration-elements/dec-elem-souvenirs.svg');
-  display: flex;
-  margin:-10px 0px 27px 0px;
-}
-
-.features-underlist .feature-item {
-  display: flex;
-  flex-direction: column;
-  max-width:300px;
-
+  margin:0px 0px 27px 0px;
 }
 
 .features-underlist {
   display:flex;
   justify-content: space-around;
   text-align: center;
-  margin:0px 0px 68px 0px;
+  margin:0;
+}
+
+.features-underlist .feature-item {
+  display: flex;
+  flex-direction: column;
+  max-width:300px;
+}
+
+.wraper-feature-one {
+  margin:0px 0px 83px 0px;
+}
+
+.features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
+  margin-bottom:62px;
+}
+
+/* Blue Box + Picture Wrapper*/
+
+.picture-wrapper {
+  display: flex;
+  min-height:256px;
 }
 
 .picture-wrapper-rtl img {
@@ -322,13 +307,79 @@ input[type="radio"].visually-hidden {
   margin-bottom: 23px;
 }
 
+/* Blue Blocks*/
+
+.blue-block {
+  background-color: var(--basic-lowblue);
+  width:400px;
+  margin:0;
+  padding:48px 40px 25px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blue-block-first p:first-of-type {
+  padding-top:3px;
+  padding-bottom:2px;
+}
+
+.blue-block-first p:first-of-type {
+  padding-top:3px;
+  padding-bottom:2px;
+}
+
+.blue-block-second {
+  padding-top: 51px;
+}
+
+.blue-block-second h3 {
+  margin-bottom: 27px;
+}
+
+.blue-block-second p:first-of-type {
+  margin-bottom:25px;
+}
+
+/* Decorative Elements*/
+
+.house-decor-img::before,
+.food-decor-img::before,
+.souvenirs-decor-img::before {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px 0px 25px 0px;
+}
+
+.house-decor-img + p,
+.food-decor-img + p,
+.souvenirs-decor-img + p {
+  margin: 0;
+}
+
+.house-decor-img::before {
+  content: url('../img/decoration-elements/dec-elem-living-house.svg');
+  margin-top:-1px;
+}
+
+.food-decor-img::before {
+  content: url('../img/decoration-elements/dec-elem-food.svg');
+  display: flex;
+}
+
+.souvenirs-decor-img::before {
+  content: url('../img/decoration-elements/dec-elem-souvenirs.svg');
+  display: flex;
+  margin-top:-6px;
+}
+
 /* Features Three, Four And Five*/
 
 .feature-item-small {
   display:inline-flex;
   flex-direction: column;
   background-color: var(--basic-backgroundcolorgray);
-  padding:47px 0px 54px 0px;
+  padding:47px 0px 58px 0px;
   text-align:center;
   list-style:none;
   margin:0;
@@ -343,10 +394,12 @@ input[type="radio"].visually-hidden {
 .feature-item-small p {
   align-self: center;
   width:64.5%;
+  margin:0;
 }
 
-.order-number {
-  margin-bottom:10px;
+.feature-item-small .order-number {
+  margin:0;
+  margin-bottom:26px;
 }
 
 /* Searching Hotels in Sedona*/
@@ -356,19 +409,18 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   font-size:30px;
   line-height:30px;
-  margin-left:-11px;
+  margin:0px 0px 31px 0px;
+  padding: 0px 15px 0px 5px;
 }
 
 .date-of-travel {
   line-height:24px;
   margin: 0px auto;
-  margin-bottom:44px;
-  width:25%;
+  margin-bottom:43px;
 }
 
 .date-of-travel span {
-  white-space: nowrap;
-  margin:0px 0px 0px -68px;
+  display: block;
 }
 
 .search-of-hotel {
@@ -397,7 +449,6 @@ input[type="radio"].visually-hidden {
 .big-brown-button {
   background-color: var(--basic-lowbrown);
   margin:0;
-  padding:0;
   font-size:21px;
   line-height:26px;
   min-width:568px;
@@ -440,13 +491,23 @@ input[type="radio"].visually-hidden {
 }
 
 .form-date {
+  background: url("../img/calendar.svg") no-repeat;
+  background-position: 317px center;
   background-color: var(--basic-backgroundcolor);
   border:none;
   min-height: 38px;
-  min-width: 346px;
+  min-width: 318px;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color:var(--basic-black);
+  font-size:14px;
+  line-height:21px;
+  text-transform:uppercase;
+  padding: 0px 13px 0px 15px;
 }
 
 .number-of-persons {
+  background: url("../img/minus.svg") no-repeat 15px center,
+              url("../img/plus.svg") no-repeat 92px center;
   background-color: var(--basic-backgroundcolor);
   border:none;
   max-width:112px;
@@ -459,7 +520,7 @@ input[type="radio"].visually-hidden {
 }
 
 .adult-children {
-  margin:0px 0px 54px 0px;
+  margin:0px 0px 52px 0px;
   text-align: left;
 }
 
@@ -529,7 +590,7 @@ input[type="radio"].visually-hidden {
   max-width:102px;
   list-style:none;
   padding:0;
-  margin:-5px 0px 0px -63px;
+  margin:-8px 0px 0px -62px;
 }
 
 .social-button {
@@ -722,6 +783,7 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   min-width:137px;
   align-self:center;
+  padding:0px 5px 0px 5px;
 }
 
 .button-white:hover {

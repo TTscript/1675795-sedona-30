@@ -39,7 +39,7 @@
   font-style: normal;
 }
 
-/*Global*/
+/* Global */
 
 .page {
   height: 100%;
@@ -99,7 +99,7 @@ img {
   color: rgba(255,255,255,0.3);
 }
 
-/* Main Navigation*/
+/* Main Navigation */
 
 .main-header {
   min-height:56px;
@@ -226,9 +226,9 @@ input[type="radio"].visually-hidden {
   margin:0px auto 47px auto;
 }
 
-/* Sedona Features*/
+/* Sedona Features */
 
-/* Feature One And Two*/
+/* Feature One And Two */
 
 .sedona-features {
   margin-bottom:52px;
@@ -278,7 +278,7 @@ input[type="radio"].visually-hidden {
   margin-bottom:62px;
 }
 
-/* Blue Box + Picture Wrapper*/
+/* Blue Box + Picture Wrapper */
 
 .picture-wrapper {
   display: flex;
@@ -286,7 +286,7 @@ input[type="radio"].visually-hidden {
 }
 
 .picture-wrapper img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .picture-wrapper-rtl img {
@@ -314,7 +314,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 23px;
 }
 
-/* Blue Blocks*/
+/* Blue Blocks */
 
 .blue-block {
   background-color: var(--basic-lowblue);
@@ -349,7 +349,7 @@ input[type="radio"].visually-hidden {
   margin-bottom:25px;
 }
 
-/* Decorative Elements*/
+/* Decorative Elements */
 
 .house-decor-img::before,
 .food-decor-img::before,
@@ -382,7 +382,7 @@ input[type="radio"].visually-hidden {
   margin-top:-6px;
 }
 
-/* Features Three, Four And Five*/
+/* Features Three, Four And Five */
 
 .feature-item-small {
   display:inline-flex;
@@ -411,7 +411,7 @@ input[type="radio"].visually-hidden {
   margin-bottom:26px;
 }
 
-/* Searching Hotels in Sedona*/
+/* Searching Hotels in Sedona */
 
 .youre-interested {
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -441,7 +441,7 @@ input[type="radio"].visually-hidden {
   padding:0;
 }
 
-/*Form Windom*/
+/* Form Windom */
 
 .form-window {
   position:relative;
@@ -498,7 +498,7 @@ input[type="radio"].visually-hidden {
   margin: 0px 19px 0px 0px;
 }
 
-/* Inputs Arrival-Departure*/
+/* Inputs Arrival-Departure */
 
 .form-date-field {
   background-color: var(--basic-backgroundcolor);
@@ -528,16 +528,19 @@ input[type="radio"].visually-hidden {
 
 .form-date:focus {
   outline: 2px solid var(--basic-linecolor);
+  outline-offset: -2px;
   background-color: var(--basic-white);
 }
 
-/* Calendar Button*/
+/* Calendar Button */
 
 .calendar-button {
-  background-color: transparent;
+  background-color:transparent;
+  width:34px;
+  height: 34px;
   position: absolute;
-  bottom:8px;
-  right:6px;
+  top:2px;
+  right:0px;
   border: none;
   outline: none;
   margin:0;
@@ -553,47 +556,56 @@ input[type="radio"].visually-hidden {
 
 .calendar-button svg {
   position: absolute;
-  bottom: 0;
-  right:0;
+  top: 5px;
+  right:6px;
 }
+
+/* Number Of People */
 
 .adult-children-field {
   position: relative;
-  background-color: yellow;
   width:114px;
   height:38px;
   z-index: 1;
 }
 
-.minus {
+.button-minus {
   position: absolute;
-  width:35px;
-  top:50%;
-  left:4px;
+  left:0;
+  top: 0px ;
+  background-color: transparent;
+  height: 34px;
+  width: 34px;
   z-index: 2;
+  border: 0;
+  outline: 0;
 }
-.minus:hover {
+
+.button-minus:hover svg {
   fill:var(--basic-black);
 }
 
-.minus:active {
+.button-minus:active svg {
   fill:var(--basic-lowblue);
 }
 
-.plus {
+.button-plus {
   position: absolute;
-  bottom:14px;
-  right:12px;
+  right:0;
+  top: 2px;
+  background-color: transparent;
+  height: 34px;
+  width: 34px;
   z-index: 2;
-  width:11px;
-  height: 11px;
+  border: 0;
+  outline: 0;
 }
 
-.plus:hover {
+.button-plus:hover svg {
   fill:var(--basic-black);
 }
 
-.plus:active {
+.button-plus:active svg {
   fill:var(--basic-lowblue);
 }
 
@@ -607,11 +619,12 @@ input[type="radio"].visually-hidden {
   border: 0;
   outline: 0;
   margin:0;
+  z-index: 1;
 }
 
 .number-of-persons::-webkit-outer-spin-button,
 .number-of-persons::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .number-of-persons::placeholder {
@@ -636,6 +649,8 @@ input[type="radio"].visually-hidden {
 .children-field {
   margin-left: 16px;
 }
+
+/*Blue Button*/
 
 .big-blue-button {
   font-size:21px;
@@ -781,8 +796,9 @@ input[type="radio"].visually-hidden {
   background: url("../img/back/filter-background-image.png") no-repeat;
   background-color:var(--basic-lowgray);
   color:var(--basic-white);
-  margin:0px 0px 35px 0px;
-  padding: 26px 73px 32px 73px;
+  margin:0px 0px 29px 0px;
+  padding: 26px 73px 32px 71px;
+  max-height:217px;
 }
 
 .filter-item {
@@ -791,15 +807,48 @@ input[type="radio"].visually-hidden {
   border:none;
 }
 
-.catalog-input-item label{
+.catalog-item label {
   display: block;
   position: relative;
   cursor: pointer;
   user-select: none;
 }
 
+.catalog-input-checkbox + label::before {
+  content: url("../img/decoration-elements/checkbox-off.svg");
+  position: absolute;
+  top:0;
+  left:-40px;
+  width:23px;
+  height:23px;
+  border: 0;
+  outline:0;
+}
+
+.shadow-checkbox + label::before {
+  content: url("../img/decoration-elements/shadow-checkbox-off.svg");
+  position: absolute;
+  top:0;
+  left:-44px;
+  width:23px;
+  height:23px;
+  border: 0;
+  outline:0;
+}
+
+.catalog-input-checkbox:checked + label::before {
+  content: url("../img/decoration-elements/checkbox-on.svg");
+  position: absolute;
+  top:0;
+  left:-40px;
+  width:23px;
+  height:23px;
+  border: 0;
+  outline:0;
+}
+
 .infrastructure-block {
-  margin-right:119px;
+  margin-right:120px;
 }
 
 .scale-block {
@@ -816,14 +865,18 @@ input[type="radio"].visually-hidden {
   padding:0px 0px 0px 0px;
 }
 
+.cost-per-day {
+  margin-bottom: 11px;
+}
+
 .catalog-list {
   list-style:none;
-  padding: 0;
+  padding:0px 0px 0px 40px;
   margin:0;
 }
 
 .catalog-list .catalog-item:last-of-type {
-  padding: 0;
+  padding:0;
   margin:0;
 }
 
@@ -832,26 +885,35 @@ input[type="radio"].visually-hidden {
   margin:0px 0px 25px 0px;
 }
 
+.combined-inputs {
+  position: relative;
+  border:2px solid var(--basic-white);
+}
+
+.combined-inputs svg {
+ transform: translate(2px, 6px);
+}
+
 .range-controls {
-  position:relative;
+  position: relative;
 }
 
 .range-controls .scale {
   height:2px;
-  width:333px;
+  width:317px;
   background-color: rgba(255,255,255, 0.3);
   margin: 20px 0px 33px 0px;
 }
 
 .range-controls .bar {
-  width:248px;
+  width:258px;
   height:2px;
   background-color: var(--basic-white);
 }
 
 .range-controls .toggle {
   position:absolute;
-  top:33px;
+  top:47px;
   width:4px;
   height:4px;
   background-color: var( --basic-sliderinsidebutton);
@@ -866,25 +928,40 @@ input[type="radio"].visually-hidden {
 }
 
 .range-controls .toggle-max {
-  left:245px;
+  left:253px;
 }
 
 .range-controls input {
   color:var(--basic-white);
   background-color:transparent;
-  border: 2px solid var(--basic-white);
   border-radius: 2px;
+  height:30px;
+  width: 148px;
+  border: 0;
+  outline: 0;
+}
+
+.range-controls input::-webkit-outer-spin-button,
+.range-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .range-controls input::placeholder {
   color: var(--basic-white);
-  font:inherit;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size:14px;
+  line-height:21px;
+  text-transform:uppercase;
+  text-align: center;
+  margin: 0px -7px 0px 0px;
 }
 
 .price-controls {
   display: flex;
   justify-content: space-between;
 }
+
+/* White Button*/
 
 .button-white {
   color:var(--basic-white);
@@ -894,8 +971,10 @@ input[type="radio"].visually-hidden {
   text-transform:inherit;
   background-color: transparent;
   min-width:137px;
+  min-height: 36px;
   align-self:center;
   padding:0px 5px 0px 5px;
+  margin-left:-8px;
 }
 
 .button-white:hover {
@@ -911,8 +990,9 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-block {
-  padding: 0px 73px 0px 73px;
-  margin:0px 0px 56px 0px;
+  padding: 0px 73px 27px 73px;
+  margin:0px 0px 29px 0px;
+  border-bottom:1px solid var(--basic-linecolor);
 }
 
 .sort-block h3 {
@@ -937,11 +1017,22 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px dashed var(--basic-lowblue);
   opacity:0.3;
   margin:0px 31px 0px 0px;
+  padding: 0;
+}
+
+.by-type {
+  margin-right: 37px;
+  padding-top:3px;
+}
+
+.by-rating {
+  margin-bottom:10px;
 }
 
 .up-down-buttons {
   display: flex;
   margin: 0px 0px 0px auto;
+  padding-top:10px;
 }
 
 .sort-list li:last-of-type {
@@ -1024,12 +1115,6 @@ input[type="radio"].visually-hidden {
   padding:0;
 }
 
-.hotels-list li {
-  margin:0;
-  padding: 0px 73px 0px 73px;
-  border: 0;
-}
-
 .hotels-list,
 .sort-list {
   list-style:none;
@@ -1038,16 +1123,34 @@ input[type="radio"].visually-hidden {
 .all-hotels {
   display: flex;
   width:100%;
+  padding: 0px 73px 24px 73px;
   margin:0px 0px 30px 0px;
-  padding: 0;
+  border-bottom:1px solid var(--basic-linecolor);
+}
+
+.description-block {
+  margin:-6px 0px 0px -1px;
 }
 
 .description-block h2 {
-  margin:0;
+  margin:0px 0px 6px 0px;
 }
 
 .backward-line {
-  display: inline;
+  display: inline-block;
+  margin:0px 0px 18px 0px;
+}
+
+.backward-line:first-of-type {
+  margin-right: 35px;
+}
+
+.backward-line.backward-line-motel {
+  margin-right: 60px;
+}
+
+.backward-line.backward-line-apartments {
+  margin-right: 18px;
 }
 
 .all-hotels img {
@@ -1067,13 +1170,32 @@ input[type="radio"].visually-hidden {
   color: rgba(255,255,255, 0.3);
 }
 
+.description-buttons {
+  margin:0;
+  padding:0;
+}
+
+.description-buttons .button:first-of-type {
+ padding:3px 17px 3px 17px;
+ margin-top: -3px;
+}
+
+.description-buttons .button-brown {
+  padding:3px 16px 3px 16px;
+  margin-top: -3px;
+}
+
+.description-buttons a:first-of-type {
+  margin-right: 2px;
+}
+
 /* Rating*/
 
 .rating-block {
   display: flex;
   flex-direction: column;
-  margin:0;
-  margin-left: auto;
+  justify-content: space-between;
+  margin:0px -2px 5px auto;
 }
 
 .rating-block p {
@@ -1100,11 +1222,22 @@ input[type="radio"].visually-hidden {
   background-color:var(--basic-backgroundcolor);
   min-width:110px;
   height:27px;
+  margin: 0px 0px 0px 0px;
 }
 
+/* Catalog Footer */
+
+.catalog-footer {
+  margin-top:-185px;
+}
+
+
 /*
-button, label, p, input, span, h1,h2,h3,h4,h5,h6, .arrival-departure {
+button, label, p, input, span, h1,h2,h3,h4,h5,h6, .arrival-departure, img, div, li ,ul {
   margin:0;
   padding:0;
-}
-*/
+  border:0;
+  outline: 0;
+}*/
+
+

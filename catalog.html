@@ -44,7 +44,7 @@
               <label for="parking">Парковка</label>
             </li>
             <li class="catalog-item">
-              <input class="visually-hidden catalog-input-item  catalog-input-checkbox shadow-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+              <input class="visually-hidden catalog-input-item  catalog-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
               <label for="wi-fi">Wi-Fi</label>
             </li>
           </ul>
@@ -71,16 +71,15 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="combined-inputs">
-                  <input class="scale-entry-box" type="number" name="min-price" placeholder="от 0">
-                  <svg width="2" height="22" viewBox="0 0 2 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="2" height="22" fill="white"/>
-                    </svg>
-                  <input class="scale-entry-box" type="number" name="max-price" placeholder="до 15000">
+                  <input id="min" class="scale-entry-box" type="number" name="min-price" placeholder="от 0">
+                  <input id="max" class="scale-entry-box" type="number" name="max-price" placeholder="до 15000">
                 </div>
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
+                <label for="min"></label>
                 <div class="toggle toggle-min" tabindex="0"></div>
+                <label for="max"></label>
                 <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="price-controls"> </div>
@@ -108,20 +107,20 @@
           <li class="all-hotels amara-hotel">
             <a href="#"><img src="img/amara-resort-and-spa.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa"></a>
             <div class="description-block">
-              <h2 class="amara-title"><a class="name-of-hotel" href="#">Amara Resort & Spa</a></h2>
+              <h3 class="amara-title"><a class="name-of-hotel" href="#">Amara Resort & Spa</a></h3>
               <p class="backward-line backward-line-hotel">Гостиница</p>
               <p class="backward-line">От 4000 Р.</p>
               <p class="description-buttons">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button button-blue" href="#">Подробнее</a>
                 <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
             <div class="rating-block">
               <div class="four-stars stars">
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
               <p class="rating">Рейтинг: 8,5</p>
             </div>
@@ -130,19 +129,19 @@
           <li class="all-hotels desert-hotel">
             <a href="#"><img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn"></a>
             <div class="description-block">
-              <h2><a class="name-of-hotel" href="#">Desert Quail Inn</a></h2>
+              <h3><a class="name-of-hotel" href="#">Desert Quail Inn</a></h3>
               <p class="backward-line backward-line-motel">Мотель</p>
               <p class="backward-line">От 3000 Р.</p>
               <p class="description-buttons">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button button-blue" href="#">Подробнее</a>
                 <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
             <div class="rating-block">
               <div class="three-stars stars">
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
               <p class="rating">Рейтинг: 8,9</p>
             </div>
@@ -151,18 +150,18 @@
           <li class="all-hotels villas-hotel">
             <a href="#"><img class="picture" src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo"></a>
             <div class="description-block">
-              <h2><a class="name-of-hotel" href="#">Villas at Poco Diablo</a></h2>
+              <h3><a class="name-of-hotel" href="#">Villas at Poco Diablo</a></h3>
               <p class="backward-line backward-line-apartments">Апартаменты</p>
               <p class="backward-line">От 2000 Р.</p>
               <p class="description-buttons">
-                <a class="button" href="#">Подробнее</a>
+                <a class="button button-blue" href="#">Подробнее</a>
                 <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
             <div class="rating-block">
               <div class="two-stars stars">
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
-                <span><img src="img/star.svg" width="19" height="17" alt="Рейтинг в звездах"></span>
+                <span></span>
+                <span></span>
               </div>
               <p class="rating">Рейтинг: 9,2</p>
             </div>

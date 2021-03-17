@@ -668,29 +668,26 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items:center;
   margin:0;
-  padding:0px 138px 0px 111px;
+  padding:30px 125px 30px 125px;
   background-color: var(--basic-white);
   opacity:0.9;
 }
 
 .upper-layer-footer {
-  margin-top:-127px;
+  margin-top:-126px;
 }
 
 /* Contacts */
 
 .contact-information {
   text-align: center;
-  padding:0px 0px 30px 14px;
+  padding: 0;
+  margin:0;
 }
 
 .contact-information p {
   margin:0;
-  padding:0;
-}
-
-.contact-information .tag-visitsedona {
-  padding:10px;
+  padding: 0;
 }
 
 .tag-visitsedona,
@@ -699,6 +696,8 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   font-size: 21px;
   line-height: 26px;
+  margin:0;
+  padding:0;
 }
 
 /* Social Buttons */
@@ -707,10 +706,9 @@ input[type="radio"].visually-hidden {
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:6px;
-  max-width:102px;
   list-style:none;
   padding:0;
-  margin:-8px 0px 0px -62px;
+  margin:0;
 }
 
 .social-button {
@@ -718,6 +716,8 @@ input[type="radio"].visually-hidden {
   display:inline-block;
   min-width:46px;
   min-height:48px;
+  padding: 0;
+  margin:0;
 }
 
 .social-button:hover {
@@ -767,10 +767,14 @@ input[type="radio"].visually-hidden {
 .footer-copyright {
   display: flex;
   line-height:26px;
+  padding: 0;
+  margin:0;
 }
 
-.footer-copyright span {
-  padding:10px 7px 0px 0px;
+.footer-copyright span,
+.html-academy-logo {
+  padding:0;
+  margin:0;
 }
 
 .html-academy-logo:hover svg {
@@ -880,8 +884,37 @@ input[type="radio"].visually-hidden {
 }
 
 .combined-inputs {
-  position: relative;
   border:2px solid var(--basic-white);
+  min-width:290px;
+  min-height: 32px;
+  align-items: center;
+  display: flex;
+}
+
+.scale-input-wrappers {
+  display:inline-flex;
+  flex-wrap:nowrap;
+  text-align:center;
+  vertical-align:middle;
+  min-width:157px;
+  justify-content:flex-end;
+}
+
+.range-controls input {
+  color:var(--basic-white);
+  background-color:transparent;
+  border-radius: 2px;
+  border:0;
+  outline:0;
+  max-width:70px;
+}
+
+.range-controls input::placeholder {
+  color: var(--basic-white);
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size:14px;
+  line-height:21px;
+  text-transform:uppercase;
 }
 
 .combined-inputs::before {
@@ -925,32 +958,6 @@ input[type="radio"].visually-hidden {
 
 .range-controls .toggle-max {
   left:253px;
-}
-
-.range-controls input {
-  color:var(--basic-white);
-  background-color:transparent;
-  border-radius: 2px;
-  height:30px;
-  width: 148px;
-  border: 0;
-  outline: 0;
-  text-align: center;
-}
-
-.range-controls input::-webkit-outer-spin-button,
-.range-controls input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.range-controls input::placeholder {
-  color: var(--basic-white);
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size:14px;
-  line-height:21px;
-  text-transform:uppercase;
-  text-align: center;
-  margin: 0px -7px 0px 0px;
 }
 
 .price-controls {

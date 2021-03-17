@@ -71,15 +71,19 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="combined-inputs">
-                  <input id="min" class="scale-entry-box" type="number" name="min-price" placeholder="от 0">
-                  <input id="max" class="scale-entry-box" type="number" name="max-price" placeholder="до 15000">
+                  <div class="scale-input-wrappers">
+                    <label for="min">от</label>
+                    <input id="min" class="scale-entry-box" type="text" name="min-price">
+                  </div>
+                  <div class="scale-input-wrappers">
+                    <label for="max">До</label>
+                    <input id="max" class="scale-entry-box" type="text" name="max-price">
+                  </div>
                 </div>
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <label for="min"></label>
                 <div class="toggle toggle-min" tabindex="0"></div>
-                <label for="max"></label>
                 <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="price-controls"> </div>

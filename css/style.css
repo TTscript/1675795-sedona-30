@@ -668,13 +668,13 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items:center;
   margin:0;
-  padding:30px 125px 30px 125px;
+  padding:22px 125px 33px 125px;
   background-color: var(--basic-white);
   opacity:0.9;
 }
 
 .upper-layer-footer {
-  margin-top:-126px;
+  margin-top:-120px;
 }
 
 /* Contacts */
@@ -698,6 +698,11 @@ input[type="radio"].visually-hidden {
   line-height: 26px;
   margin:0;
   padding:0;
+  align-items: space-between;
+}
+
+.contact-information .tag-visitsedona {
+  margin-bottom:9px;
 }
 
 /* Social Buttons */
@@ -708,7 +713,7 @@ input[type="radio"].visually-hidden {
   gap:6px;
   list-style:none;
   padding:0;
-  margin:0;
+  margin:12px 0 0;
 }
 
 .social-button {
@@ -768,13 +773,23 @@ input[type="radio"].visually-hidden {
   display: flex;
   line-height:26px;
   padding: 0;
-  margin:0;
+  margin:12px 0 0;
+  align-items: center;
 }
 
 .footer-copyright span,
 .html-academy-logo {
   padding:0;
   margin:0;
+}
+
+.footer-copyright span {
+  margin-left:14px;
+}
+
+.html-academy-logo {
+  display:flex;
+  margin:0px 15px 0px 5px;
 }
 
 .html-academy-logo:hover svg {
@@ -802,7 +817,7 @@ input[type="radio"].visually-hidden {
   color:var(--basic-white);
   margin:0px 0px 32px 0px;
   padding: 26px 73px 32px 71px;
-  max-height:217px;
+  background-size: cover;
 }
 
 .filter-item {
@@ -842,11 +857,11 @@ input[type="radio"].visually-hidden {
 
 .infrastructure-block {
   margin-right:120px;
-  max-width: 135px;
+  max-width: 235px;
 }
 
 .housing-block {
-  max-width:135px;
+  max-width:235px;
 }
 
 .scale-block {
@@ -892,12 +907,14 @@ input[type="radio"].visually-hidden {
 }
 
 .scale-input-wrappers {
-  display:inline-flex;
-  flex-wrap:nowrap;
+  display:flex;
   text-align:center;
-  vertical-align:middle;
-  min-width:157px;
   justify-content:flex-end;
+  width:50%;
+}
+
+.scale-entry-box-right {
+  margin-right: 8px;
 }
 
 .range-controls input {
@@ -1131,8 +1148,7 @@ input[type="radio"].visually-hidden {
 }
 
 .all-hotels:last-of-type {
-padding-bottom:0;
-margin-bottom:37px;
+  margin-bottom:0;
 }
 
 .all-hotels a {

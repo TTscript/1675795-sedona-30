@@ -206,7 +206,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-sedona {
-  margin-bottom:55px;
+  margin-bottom:54px;
 }
 
 .sedona-town,
@@ -275,7 +275,7 @@ input[type="radio"].visually-hidden {
 }
 
 .features-list > .feature-item:first-of-type > .picture-wrapper:first-of-type {
-  margin-bottom:62px;
+  margin-bottom:61px;
 }
 
 /* Blue Box + Picture Wrapper */
@@ -388,7 +388,7 @@ input[type="radio"].visually-hidden {
   display:inline-flex;
   flex-direction: column;
   background-color: var(--basic-backgroundcolorgray);
-  padding:47px 0px 58px 0px;
+  padding:49px 0px 56px 0px;
   text-align:center;
   list-style:none;
   margin:0;
@@ -408,7 +408,7 @@ input[type="radio"].visually-hidden {
 
 .feature-item-small .order-number {
   margin:0;
-  margin-bottom:26px;
+  margin-bottom:25px;
 }
 
 /* Searching Hotels in Sedona */
@@ -418,7 +418,7 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   font-size:30px;
   line-height:30px;
-  margin:0px 0px 31px 0px;
+  margin:0px 0px 32px 0px;
   padding: 0px 15px 0px 5px;
 }
 
@@ -571,8 +571,8 @@ input[type="radio"].visually-hidden {
 
 .button-minus {
   position: absolute;
-  left:0;
-  top: 0px ;
+  left:4px;
+  top:-1px;
   background-color: transparent;
   height: 34px;
   width: 34px;
@@ -596,7 +596,7 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   height: 34px;
   width: 34px;
-  z-index: 2;
+  z-index:2;
   border: 0;
   outline: 0;
 }
@@ -611,13 +611,13 @@ input[type="radio"].visually-hidden {
 
 .number-of-persons {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom:0;
+  left:0;
   background-color: var(--basic-backgroundcolor);
   max-width:114px;
   min-height:38px;
-  border: 0;
-  outline: 0;
+  border:0;
+  outline:0;
   margin:0;
   z-index: 1;
 }
@@ -668,13 +668,17 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items:center;
   margin:0;
-  padding:22px 125px 33px 125px;
+  padding:15px 125px 33px 125px;
   background-color: var(--basic-white);
   opacity:0.9;
 }
 
 .upper-layer-footer {
-  margin-top:-120px;
+  margin-top:-125px;
+}
+
+.catalog-footer {
+  padding:24px 125px 33px 125px;
 }
 
 /* Contacts */
@@ -698,7 +702,6 @@ input[type="radio"].visually-hidden {
   line-height: 26px;
   margin:0;
   padding:0;
-  align-items: space-between;
 }
 
 .contact-information .tag-visitsedona {
@@ -713,7 +716,7 @@ input[type="radio"].visually-hidden {
   gap:6px;
   list-style:none;
   padding:0;
-  margin:12px 0 0;
+  margin:12px 0px 0px;
 }
 
 .social-button {
@@ -773,7 +776,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   line-height:26px;
   padding: 0;
-  margin:12px 0 0;
+  margin:12px 0px 0px;
   align-items: center;
 }
 

@@ -84,7 +84,6 @@ img {
   color: var(--basic-white);
   display:inline-block;
   vertical-align:middle;
-  outline:none;
   border:0;
   margin:0;
   padding:0px 15px 0px 15px;
@@ -511,7 +510,6 @@ input[type="radio"].visually-hidden {
 .form-date {
   background-color: var(--basic-backgroundcolor);
   border:none;
-  outline: none;
   min-height: 38px;
   min-width: 319px;
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -542,7 +540,6 @@ input[type="radio"].visually-hidden {
   top:2px;
   right:0px;
   border: none;
-  outline: none;
   margin:0;
 }
 
@@ -578,7 +575,6 @@ input[type="radio"].visually-hidden {
   width: 34px;
   z-index: 2;
   border: 0;
-  outline: 0;
 }
 
 .button-minus:hover svg {
@@ -598,7 +594,6 @@ input[type="radio"].visually-hidden {
   width: 34px;
   z-index:2;
   border: 0;
-  outline: 0;
 }
 
 .button-plus:hover svg {
@@ -617,14 +612,8 @@ input[type="radio"].visually-hidden {
   max-width:114px;
   min-height:38px;
   border:0;
-  outline:0;
   margin:0;
   z-index: 1;
-}
-
-.number-of-persons::-webkit-outer-spin-button,
-.number-of-persons::-webkit-inner-spin-button {
-  -webkit-appearance: none;
 }
 
 .number-of-persons::placeholder {
@@ -844,7 +833,6 @@ input[type="radio"].visually-hidden {
   width:23px;
   height:23px;
   border: 0;
-  outline:0;
 }
 
 .catalog-input-checkbox:checked + label::before {
@@ -855,7 +843,6 @@ input[type="radio"].visually-hidden {
   width:23px;
   height:23px;
   border: 0;
-  outline:0;
 }
 
 .infrastructure-block {
@@ -925,7 +912,6 @@ input[type="radio"].visually-hidden {
   background-color:transparent;
   border-radius: 2px;
   border:0;
-  outline:0;
   max-width:70px;
 }
 

@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="img/icon/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -37,7 +37,7 @@
           <ul class="catalog-list">
             <li class="catalog-item">
               <input class="visually-hidden catalog-input-item  catalog-input-checkbox" type="checkbox" name="swimmingpool" id="swimmingpool" checked>
-              <label for="swimmingpool" aria-label="Фильтрация по инфраструктуре. Бассейн">Бассейн</label>
+              <label for="swimmingpool">Бассейн</label>
             </li>
             <li class="catalog-item">
               <input class="visually-hidden catalog-input-item  catalog-input-checkbox" type="checkbox" name="parking" id="parking">
@@ -54,7 +54,7 @@
           <ul class="catalog-list">
             <li class="catalog-item">
               <input class="visually-hidden catalog-input-item catalog-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
-              <label for="hotel" aria-label="Фильтрация по типу жилья. Гостиница">Гостиница</label>
+              <label for="hotel">Гостиница</label>
             </li>
             <li class="catalog-item">
               <input class="visually-hidden catalog-input-item  catalog-input-checkbox" type="checkbox" name="motel" id="motel" checked>
@@ -72,7 +72,7 @@
               <div class="range-controls">
                 <div class="combined-inputs">
                   <div class="scale-input-wrappers">
-                    <label for="min" aria-label="Фильтрация по стоимости в сутки. От нуля.">от</label>
+                    <label for="min">от</label>
                     <input id="min" class="scale-entry-box" type="text" name="min-price" placeholder="0">
                   </div>
                   <div class="scale-input-wrappers">
@@ -88,7 +88,7 @@
               </div>
               <div class="price-controls"> </div>
             </div>
-          <button class="button-white" type="submit" name="show-hotels" aria-label="Показать результаты поиска"> Показать</button>
+          <button class="button-white" type="submit" name="show-hotels"> Показать</button>
          </fieldset>
       </form>
 
@@ -98,12 +98,12 @@
           <h3>Найдено: 3</h3>
           <p class="sort-options">Сортировка:</p>
           <ul class="sort-list">
-            <li><a class="sort-item active-sort-item" href="#" aria-label="Сортировка по цене">По цене</a></li>
-            <li><a class="sort-item by-type" href="#" aria-label="Сортировка по типу">По типу</a></li>
-            <li><a class="sort-item by-rating" href="#" aria-label="Сортировка по рейтингу">По рейтингу</a></li>
+            <li><a class="sort-item active-sort-item" href="#">По цене</a></li>
+            <li><a class="sort-item by-type" href="#">По типу</a></li>
+            <li><a class="sort-item by-rating" href="#">По рейтингу</a></li>
           </ul>
           <div class="up-down-buttons">
-            <a class="sort-up" href="#" aria-label="Предыдущий пункт сортировки"></a><a class="sort-down" href="#" aria-label="Следующий пункт сортировки"></a>
+            <a class="sort-up" href="#" aria-label="Сортировка по возрастанию"></a><a class="sort-down" href="#" aria-label="Сортировка по убыванию"></a>
           </div>
         </div>
 
@@ -115,8 +115,8 @@
               <p class="backward-line backward-line-hotel">Гостиница</p>
               <p class="backward-line">От 4000 Р.</p>
               <p class="description-buttons">
-                <a class="button button-blue" href="#" aria-label="Подробнее об Amara Resort & Spa">Подробнее</a>
-                <a class="button button-brown" href="#" aria-label="Забронировать Amara Resort & Spa">Забронировать</a>
+                <a class="button button-blue" href="#">Подробнее</a>
+                <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
             <div class="rating-block">
@@ -126,7 +126,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <p class="rating" tabindex="0">Рейтинг: 8,5</p>
+              <p class="rating">Рейтинг: 8,5</p>
             </div>
           </li>
 
@@ -137,8 +137,8 @@
               <p class="backward-line backward-line-motel">Мотель</p>
               <p class="backward-line">От 3000 Р.</p>
               <p class="description-buttons">
-                <a class="button button-blue" href="#" aria-label="Подробнее о Desert Quail Inn">Подробнее</a>
-                <a class="button button-brown" href="#" aria-label="Забронировать Desert Quail Inn">Забронировать</a>
+                <a class="button button-blue" href="#">Подробнее</a>
+                <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
             <div class="rating-block">
@@ -147,7 +147,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <p class="rating" tabindex="0">Рейтинг: 8,9</p>
+              <p class="rating">Рейтинг: 8,9</p>
             </div>
           </li>
 
@@ -158,8 +158,8 @@
               <p class="backward-line backward-line-apartments">Апартаменты</p>
               <p class="backward-line">От 2000 Р.</p>
               <p class="description-buttons">
-                <a class="button button-blue" href="#" aria-label="Подробнее о Villas at Poco Diablo">Подробнее</a>
-                <a class="button button-brown" href="#" aria-label="Забронировать Villas at Poco Diablo">Забронировать</a>
+                <a class="button button-blue" href="#">Подробнее</a>
+                <a class="button button-brown" href="#">Забронировать</a>
               </p>
             </div>
             <div class="rating-block">
@@ -167,7 +167,7 @@
                 <span></span>
                 <span></span>
               </div>
-              <p class="rating" tabindex="0">Рейтинг: 9,2</p>
+              <p class="rating">Рейтинг: 9,2</p>
             </div>
           </li>
         </ul>
